@@ -62,6 +62,7 @@
 /drupal
 
 ## Aditional paths for Naranja Web App
-web/sites/*/files/*
-vendor
+web/sites/default/files/
+!web/sites/default/files/sync
+vendor/
 composer.lock
