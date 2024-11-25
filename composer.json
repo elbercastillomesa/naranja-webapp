@@ -16,10 +16,13 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/admin_toolbar": "^3.5",
+        "drupal/admin_toolbar": "3.5.1",
+        "drupal/bootstrap_barrio": "5.5.17",
         "drupal/core-composer-scaffold": "^10.3",
         "drupal/core-project-message": "^10.3",
         "drupal/core-recommended": "^10.3",
+        "drupal/custom_field": "^3.0@RC",
+        "drupal/devel": "5.3.1",
         "drupal/field_group": "^3.6",
         "drupal/pathauto": "^1.13",
         "drupal/seckit": "^2.0",
@@ -99,5 +102,11 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "mglaman/phpstan-drupal": "^1.3",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^1.12",
+        "phpstan/phpstan-deprecation-rules": "^1.2"
     }
 }
