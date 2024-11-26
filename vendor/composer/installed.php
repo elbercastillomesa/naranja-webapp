@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '62a504f02555e1d61c0b476d6133a8a2304acedd',
+        'reference' => '5a87031d0fe60418d5fd81da049fd4ccd5db4c22',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -160,6 +160,15 @@
             'reference' => '39ab8fcf5a51ce4b85ca97c7a7d033eb12831124',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/lexer',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/admin_toolbar' => array(
+            'pretty_version' => '3.5.1',
+            'version' => '3.5.1.0',
+            'reference' => '3.5.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/admin_toolbar',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -355,7 +364,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '62a504f02555e1d61c0b476d6133a8a2304acedd',
+            'reference' => '5a87031d0fe60418d5fd81da049fd4ccd5db4c22',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -550,8 +559,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.1|2.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.1|2.0',
             ),
         ),
         'psr/event-dispatcher' => array(
