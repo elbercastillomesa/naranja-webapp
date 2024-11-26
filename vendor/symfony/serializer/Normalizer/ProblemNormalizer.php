@@ -13,7 +13,6 @@ namespace Symfony\Component\Serializer\Normalizer;
 
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
-use Symfony\Component\Messenger\Exception\ValidationFailedException as MessageValidationFailedException;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Exception\PartialDenormalizationException;
 use Symfony\Component\Serializer\SerializerAwareInterface;
@@ -51,7 +50,7 @@ class ProblemNormalizer implements NormalizerInterface, SerializerAwareInterface
         ];
     }
 
-    public function normalize(mixed $object, ?string $format = null, array $context = []): array
+    public function normalize(mixed $object, string $format = null, array $context = []): array
     {
         if (!$object instanceof FlattenException) {
             throw new InvalidArgumentException(sprintf('The object must implement "%s".', FlattenException::class));
@@ -85,7 +84,7 @@ class ProblemNormalizer implements NormalizerInterface, SerializerAwareInterface
                     ),
                 ];
                 $data['detail'] = implode("\n", array_map(fn ($e) => $e['propertyPath'].': '.$e['title'], $data['violations']));
-            } elseif (($exception instanceof ValidationFailedException || $exception instanceof MessageValidationFailedException)
+            } elseif ($exception instanceof ValidationFailedException
                 && $this->serializer instanceof NormalizerInterface
                 && $this->serializer->supportsNormalization($exception->getViolations(), $format, $context)
             ) {
@@ -110,7 +109,7 @@ class ProblemNormalizer implements NormalizerInterface, SerializerAwareInterface
     /**
      * @param array $context
      */
-    public function supportsNormalization(mixed $data, ?string $format = null /* , array $context = [] */): bool
+    public function supportsNormalization(mixed $data, string $format = null /* , array $context = [] */): bool
     {
         return $data instanceof FlattenException;
     }

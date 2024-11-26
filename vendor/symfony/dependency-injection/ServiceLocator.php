@@ -60,9 +60,6 @@ class ServiceLocator implements ServiceProviderInterface, \Countable
         }
     }
 
-    /**
-     * @return mixed
-     */
     public function __invoke(string $id)
     {
         return isset($this->factories[$id]) ? $this->get($id) : null;
@@ -138,7 +135,7 @@ class ServiceLocator implements ServiceProviderInterface, \Countable
         return new ServiceCircularReferenceException($id, $path);
     }
 
-    private function formatAlternatives(?array $alternatives = null, string $separator = 'and'): string
+    private function formatAlternatives(array $alternatives = null, string $separator = 'and'): string
     {
         $format = '"%s"%s';
         if (null === $alternatives) {

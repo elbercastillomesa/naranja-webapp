@@ -96,15 +96,10 @@ final class SafeAnalysisNodeVisitor implements NodeVisitorInterface
             $this->setSafe($node, $safe);
         } elseif ($node instanceof FilterExpression) {
             // filter expression is safe when the filter is safe
-            if ($node->hasAttribute('twig_callable')) {
-                $filter = $node->getAttribute('twig_callable');
-            } else {
-                // legacy
-                $filter = $env->getFilter($node->getAttribute('name'));
-            }
-
-            if ($filter) {
-                $safe = $filter->getSafe($node->getNode('arguments'));
+            $name = $node->getNode('filter')->getAttribute('value');
+            $args = $node->getNode('arguments');
+            if ($filter = $env->getFilter($name)) {
+                $safe = $filter->getSafe($args);
                 if (null === $safe) {
                     $safe = $this->intersectSafe($this->getSafe($node->getNode('node')), $filter->getPreservesSafety());
                 }
@@ -114,15 +109,10 @@ final class SafeAnalysisNodeVisitor implements NodeVisitorInterface
             }
         } elseif ($node instanceof FunctionExpression) {
             // function expression is safe when the function is safe
-            if ($node->hasAttribute('twig_callable')) {
-                $function = $node->getAttribute('twig_callable');
-            } else {
-                // legacy
-                $function = $env->getFunction($node->getAttribute('name'));
-            }
-
-            if ($function) {
-                $this->setSafe($node, $function->getSafe($node->getNode('arguments')));
+            $name = $node->getAttribute('name');
+            $args = $node->getNode('arguments');
+            if ($function = $env->getFunction($name)) {
+                $this->setSafe($node, $function->getSafe($args));
             } else {
                 $this->setSafe($node, []);
             }
@@ -146,7 +136,7 @@ final class SafeAnalysisNodeVisitor implements NodeVisitorInterface
         return $node;
     }
 
-    private function intersectSafe(?array $a = null, ?array $b = null): array
+    private function intersectSafe(array $a = null, array $b = null): array
     {
         if (null === $a || null === $b) {
             return [];

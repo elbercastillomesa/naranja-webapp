@@ -29,28 +29,28 @@ final class FromTokenParser extends AbstractTokenParser
     {
         $macro = $this->parser->getExpressionParser()->parseExpression();
         $stream = $this->parser->getStream();
-        $stream->expect(Token::NAME_TYPE, 'import');
+        $stream->expect(/* Token::NAME_TYPE */ 5, 'import');
 
         $targets = [];
-        while (true) {
-            $name = $stream->expect(Token::NAME_TYPE)->getValue();
+        do {
+            $name = $stream->expect(/* Token::NAME_TYPE */ 5)->getValue();
 
             $alias = $name;
             if ($stream->nextIf('as')) {
-                $alias = $stream->expect(Token::NAME_TYPE)->getValue();
+                $alias = $stream->expect(/* Token::NAME_TYPE */ 5)->getValue();
             }
 
             $targets[$name] = $alias;
 
-            if (!$stream->nextIf(Token::PUNCTUATION_TYPE, ',')) {
+            if (!$stream->nextIf(/* Token::PUNCTUATION_TYPE */ 9, ',')) {
                 break;
             }
-        }
+        } while (true);
 
-        $stream->expect(Token::BLOCK_END_TYPE);
+        $stream->expect(/* Token::BLOCK_END_TYPE */ 3);
 
         $var = new AssignNameExpression($this->parser->getVarName(), $token->getLine());
-        $node = new ImportNode($macro, $var, $token->getLine(), $this->parser->isMainScope());
+        $node = new ImportNode($macro, $var, $token->getLine(), $this->getTag(), $this->parser->isMainScope());
 
         foreach ($targets as $name => $alias) {
             $this->parser->addImportedSymbol('function', $alias, 'macro_'.$name, $var);

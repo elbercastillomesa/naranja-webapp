@@ -37,7 +37,7 @@ class RouteCollection implements \IteratorAggregate, \Countable
     /**
      * @var array<string, Alias>
      */
-    private array $aliases = [];
+    private $aliases = [];
 
     /**
      * @var array<string, ResourceInterface>
@@ -406,10 +406,5 @@ class RouteCollection implements \IteratorAggregate, \Countable
     public function getAlias(string $name): ?Alias
     {
         return $this->aliases[$name] ?? null;
-    }
-
-    public function getPriority(string $name): ?int
-    {
-        return $this->priorities[$name] ?? null;
     }
 }
