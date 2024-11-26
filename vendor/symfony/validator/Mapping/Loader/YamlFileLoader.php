@@ -43,7 +43,7 @@ class YamlFileLoader extends FileLoader
 
     public function loadClassMetadata(ClassMetadata $metadata): bool
     {
-        if (!isset($this->classes)) {
+        if (null === $this->classes) {
             $this->loadClassesFromYaml();
         }
 
@@ -65,7 +65,7 @@ class YamlFileLoader extends FileLoader
      */
     public function getMappedClasses(): array
     {
-        if (!isset($this->classes)) {
+        if (null === $this->classes) {
             $this->loadClassesFromYaml();
         }
 
@@ -89,12 +89,6 @@ class YamlFileLoader extends FileLoader
 
                 if (\is_array($options)) {
                     $options = $this->parseNodes($options);
-                }
-
-                if (null !== $options && (!\is_array($options) || array_is_list($options))) {
-                    $options = [
-                        'value' => $options,
-                    ];
                 }
 
                 $values[] = $this->newConstraint(key($childNodes), $options);
@@ -156,9 +150,6 @@ class YamlFileLoader extends FileLoader
     private function loadClassMetadataFromYaml(ClassMetadata $metadata, array $classDescription): void
     {
         if (isset($classDescription['group_sequence_provider'])) {
-            if (\is_string($classDescription['group_sequence_provider'])) {
-                $metadata->setGroupProvider($classDescription['group_sequence_provider']);
-            }
             $metadata->setGroupSequenceProvider(
                 (bool) $classDescription['group_sequence_provider']
             );

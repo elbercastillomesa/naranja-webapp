@@ -11,7 +11,6 @@
 
 namespace Symfony\Component\VarExporter;
 
-use Symfony\Component\Serializer\Attribute\Ignore;
 use Symfony\Component\VarExporter\Hydrator as PublicHydrator;
 use Symfony\Component\VarExporter\Internal\Hydrator;
 use Symfony\Component\VarExporter\Internal\LazyObjectRegistry as Registry;
@@ -28,7 +27,7 @@ trait LazyProxyTrait
      * @param \Closure():object $initializer Returns the proxied object
      * @param static|null       $instance
      */
-    public static function createLazyProxy(\Closure $initializer, ?object $instance = null): static
+    public static function createLazyProxy(\Closure $initializer, object $instance = null): static
     {
         if (self::class !== $class = $instance ? $instance::class : static::class) {
             $skippedProperties = ["\0".self::class."\0lazyObjectState" => true];
@@ -51,7 +50,6 @@ trait LazyProxyTrait
      *
      * @param $partial Whether partially initialized objects should be considered as initialized
      */
-    #[Ignore]
     public function isLazyObjectInitialized(bool $partial = false): bool
     {
         return !isset($this->lazyObjectState) || isset($this->lazyObjectState->realInstance) || Registry::$noInitializerState === $this->lazyObjectState->initializer;

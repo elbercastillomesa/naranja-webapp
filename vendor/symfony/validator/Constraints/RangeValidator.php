@@ -12,7 +12,6 @@
 namespace Symfony\Component\Validator\Constraints;
 
 use Symfony\Component\PropertyAccess\Exception\NoSuchPropertyException;
-use Symfony\Component\PropertyAccess\Exception\UninitializedPropertyException;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyAccessorInterface;
 use Symfony\Component\Validator\Constraint;
@@ -27,7 +26,7 @@ class RangeValidator extends ConstraintValidator
 {
     private ?PropertyAccessorInterface $propertyAccessor;
 
-    public function __construct(?PropertyAccessorInterface $propertyAccessor = null)
+    public function __construct(PropertyAccessorInterface $propertyAccessor = null)
     {
         $this->propertyAccessor = $propertyAccessor;
     }
@@ -69,19 +68,25 @@ class RangeValidator extends ConstraintValidator
         // the DateTime constructor:
         // https://php.net/datetime.formats
         if ($value instanceof \DateTimeInterface) {
+            $dateTimeClass = null;
+
             if (\is_string($min)) {
+                $dateTimeClass = $value instanceof \DateTimeImmutable ? \DateTimeImmutable::class : \DateTime::class;
+
                 try {
-                    $min = new $value($min);
+                    $min = new $dateTimeClass($min);
                 } catch (\Exception) {
-                    throw new ConstraintDefinitionException(sprintf('The min value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $min, get_debug_type($value), get_debug_type($constraint)));
+                    throw new ConstraintDefinitionException(sprintf('The min value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $min, $dateTimeClass, get_debug_type($constraint)));
                 }
             }
 
             if (\is_string($max)) {
+                $dateTimeClass = $dateTimeClass ?: ($value instanceof \DateTimeImmutable ? \DateTimeImmutable::class : \DateTime::class);
+
                 try {
-                    $max = new $value($max);
+                    $max = new $dateTimeClass($max);
                 } catch (\Exception) {
-                    throw new ConstraintDefinitionException(sprintf('The max value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $max, get_debug_type($value), get_debug_type($constraint)));
+                    throw new ConstraintDefinitionException(sprintf('The max value "%s" could not be converted to a "%s" instance in the "%s" constraint.', $max, $dateTimeClass, get_debug_type($constraint)));
                 }
             }
         }
@@ -163,8 +168,6 @@ class RangeValidator extends ConstraintValidator
             return $this->getPropertyAccessor()->getValue($object, $propertyPath);
         } catch (NoSuchPropertyException $e) {
             throw new ConstraintDefinitionException(sprintf('Invalid property path "%s" provided to "%s" constraint: ', $propertyPath, get_debug_type($constraint)).$e->getMessage(), 0, $e);
-        } catch (UninitializedPropertyException) {
-            return null;
         }
     }
 
@@ -184,7 +187,7 @@ class RangeValidator extends ConstraintValidator
         }
 
         try {
-            new \DateTimeImmutable($boundary);
+            new \DateTime($boundary);
         } catch (\Exception) {
             return false;
         }

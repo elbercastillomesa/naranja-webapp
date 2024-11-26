@@ -1,3 +1,0 @@
-path=$(printf '%s\n' "${PWD##*/}")
-command="ddev php "$@""
-$command
