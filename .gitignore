@@ -20,9 +20,9 @@ sites/*/services*.yml
 
 # Ignore paths that contain user-generated content.
 
-sites/*/files
+sites/*/files/*
 sites/*/private
 
 # Do not ignore sync configurations folder.
 
-!sites/*/files/sync
+!sites/default/files/sync
