@@ -22,3 +22,7 @@ sites/*/services*.yml
 
 sites/*/files
 sites/*/private
+
+# Do not ignore sync configurations folder.
+
+!sites/*/files/sync

@@ -876,7 +876,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_sj-n5pQnmKWcFjtO1QFR7U8Ml7xk5fkLP8xaf9gmKLq1MrKlN1hhdxduWVwsOaoc2SobmRWRUw/sync';
+$settings['config_sync_directory'] = 'sites/default/files/sync';
 
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';
