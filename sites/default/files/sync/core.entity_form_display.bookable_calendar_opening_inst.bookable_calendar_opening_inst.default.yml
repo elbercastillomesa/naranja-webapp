@@ -1,0 +1,60 @@
+uuid: a0a4f3ed-ff63-4348-8c24-dac17165836b
+langcode: es
+status: true
+dependencies:
+  module:
+    - bookable_calendar
+    - smart_date
+id: bookable_calendar_opening_inst.bookable_calendar_opening_inst.default
+targetEntityType: bookable_calendar_opening_inst
+bundle: bookable_calendar_opening_inst
+mode: default
+content:
+  booking:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  booking_opening:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  date:
+    type: smartdate_default
+    weight: 0
+    region: content
+    settings:
+      modal: true
+      default_duration: 60
+      default_duration_increments: |-
+        30
+        60|1 hour
+        90
+        120|2 hours
+        custom
+      show_extra: false
+      hide_date: true
+      allday: true
+      remove_seconds: false
+      duration_overlay: true
+    third_party_settings: {  }
+  slots:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    widget_type: integer
+hidden: {  }

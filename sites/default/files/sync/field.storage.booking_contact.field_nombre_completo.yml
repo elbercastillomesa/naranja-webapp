@@ -1,0 +1,21 @@
+uuid: 06475c47-2173-461f-8ee8-1341bdc5cbdf
+langcode: es
+status: true
+dependencies:
+  module:
+    - bookable_calendar
+id: booking_contact.field_nombre_completo
+field_name: field_nombre_completo
+entity_type: booking_contact
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
