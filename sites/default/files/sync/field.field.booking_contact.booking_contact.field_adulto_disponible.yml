@@ -1,0 +1,22 @@
+uuid: 85f2499b-0f56-43f0-88f8-7d7e7dfbc6fd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.booking_contact.field_adulto_disponible
+  module:
+    - bookable_calendar
+id: booking_contact.booking_contact.field_adulto_disponible
+field_name: field_adulto_disponible
+entity_type: booking_contact
+bundle: booking_contact
+label: 'Adulto Disponible'
+description: '¿Para el día de la reserva se cuenta con el acompañamiento de una persona mayor de 18 años con su documento que lo acredite?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean
