@@ -19,7 +19,6 @@
         "drupal/admin_toolbar": "^3.5",
         "drupal/bookable_calendar": "2.2.12",
         "drupal/bootstrap5": "^4.0",
-        "drupal/bootstrap_barrio": "^5.5",
         "drupal/bootstrap_layout_builder": "^2.2",
         "drupal/calendar_view": "^2.1",
         "drupal/core-composer-scaffold": "^10.1",
