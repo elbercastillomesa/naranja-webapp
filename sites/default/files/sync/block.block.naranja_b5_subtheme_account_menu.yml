@@ -1,0 +1,27 @@
+uuid: baac3fbf-c04c-42d0-b40e-3b7d3938deca
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: tzvCISuGNMzldxVHnp06eCw2gny-YWFAORZ7vEghfUo
+id: naranja_b5_subtheme_account_menu
+theme: naranja_b5_subtheme
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menú de cuenta de usuario'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

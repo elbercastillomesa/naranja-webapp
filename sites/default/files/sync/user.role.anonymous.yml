@@ -2,13 +2,11 @@ uuid: 1c46f38a-60a2-4f3c-8310-df50f561e995
 langcode: es
 status: true
 dependencies:
-  config:
-    - filter.format.restricted_html
   module:
     - bookable_calendar
     - comment
     - contact
-    - filter
+    - media
     - search
     - system
 _core:
@@ -23,4 +21,4 @@ permissions:
   - 'access site-wide contact form'
   - 'create booking contact'
   - 'search content'
-  - 'use text format restricted_html'
+  - 'view media'

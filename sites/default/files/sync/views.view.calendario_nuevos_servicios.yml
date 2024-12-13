@@ -231,7 +231,8 @@ display:
         type: normal
         title: 'Conectate a Naranja'
         description: 'Solicita tu servicio'
-        weight: 0
+        weight: -46
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

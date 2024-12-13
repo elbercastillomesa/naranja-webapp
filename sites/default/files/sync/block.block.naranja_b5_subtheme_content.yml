@@ -1,0 +1,22 @@
+uuid: 63309587-2e09-4e41-b8ba-590e91f90c72
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: HWFbec8iuJoYmuRZ1i04wJLUpsgx23Y0lhZsaK_SpeA
+id: naranja_b5_subtheme_content
+theme: naranja_b5_subtheme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

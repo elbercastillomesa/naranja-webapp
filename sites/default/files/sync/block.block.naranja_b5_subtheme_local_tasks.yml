@@ -1,0 +1,22 @@
+uuid: 20ba957c-0eff-4016-887d-c0a68dbca327
+langcode: es
+status: true
+dependencies:
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: _xOrhmIJR9NazGlEQ1SsLA9TPG_KpKLWPW9Cf966erk
+id: naranja_b5_subtheme_local_tasks
+theme: naranja_b5_subtheme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

@@ -6,6 +6,7 @@ dependencies:
     - system.menu.main
   module:
     - calendar_view
+    - smart_date
     - user
 _core:
   default_config_hash: 1HknsAIgBvRwyT3ZaoWTeC8ji1mk-GHqvW8THm7GgKw
@@ -280,6 +281,8 @@ display:
       menu:
         type: normal
         title: 'Registro de usuario'
+        weight: -43
+        enabled: false
         menu_name: main
         parent: ''
     cache_metadata:
