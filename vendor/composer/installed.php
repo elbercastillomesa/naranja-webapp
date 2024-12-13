@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '02c9e900e5c675113ee02c8c9d763665decb3a23',
+        'reference' => '92246ab609be74d34e9f3a39f0dc60ec433cd65a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -226,6 +226,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/content_as_config' => array(
+            'pretty_version' => '1.0.10',
+            'version' => '1.0.10.0',
+            'reference' => '1.0.10',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../modules/contrib/content_as_config',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/core' => array(
             'pretty_version' => '10.3.10',
             'version' => '10.3.10.0',
@@ -445,7 +454,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '02c9e900e5c675113ee02c8c9d763665decb3a23',
+            'reference' => '92246ab609be74d34e9f3a39f0dc60ec433cd65a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
