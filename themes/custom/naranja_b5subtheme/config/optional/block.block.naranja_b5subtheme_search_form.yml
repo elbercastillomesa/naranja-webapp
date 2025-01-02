@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - naranja_b5_subtheme
-id: naranja_b5_subtheme_search_form
-theme: naranja_b5_subtheme
+    - naranja_b5subtheme
+id: naranja_b5subtheme_search_form
+theme: naranja_b5subtheme
 region: nav_additional
 weight: 0
 provider: null

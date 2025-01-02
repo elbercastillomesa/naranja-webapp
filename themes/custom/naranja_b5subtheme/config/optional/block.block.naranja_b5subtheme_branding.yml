@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - naranja_b5_subtheme
-id: naranja_b5_subtheme_branding
-theme: naranja_b5_subtheme
+    - naranja_b5subtheme
+id: naranja_b5subtheme_branding
+theme: naranja_b5subtheme
 region: nav_branding
 weight: -6
 provider: null

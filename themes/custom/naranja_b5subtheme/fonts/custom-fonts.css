@@ -1,0 +1,19 @@
+/** Yaro Op Black **/
+@font-face {
+    font-family: "Yaro Op";
+    src:
+        local("Yaro Op"),
+        url("../fonts/yaro-op-black.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/** Yaro Op Thin **/
+@font-face {
+    font-family: "Yaro Op";
+    src:
+        local("Yaro Op"),
+        url("../fonts/yaro-op-thin.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}

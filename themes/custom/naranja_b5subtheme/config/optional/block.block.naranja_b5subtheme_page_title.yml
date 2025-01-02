@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - naranja_b5_subtheme
-id: naranja_b5_subtheme_page_title
-theme: naranja_b5_subtheme
+    - naranja_b5subtheme
+id: naranja_b5subtheme_page_title
+theme: naranja_b5subtheme
 region: content
 weight: -6
 provider: null

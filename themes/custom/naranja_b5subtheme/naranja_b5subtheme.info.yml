@@ -1,10 +1,11 @@
-name: 'Naranja Bootstrap5'
+name: 'Naranja B5 subtheme'
 type: theme
-description: 'Naranja Bootstrap5 subtheme based on Bootstrap 5 theme.'
+description: 'Naranja B5 subtheme subtheme based on Bootstrap 5 theme.'
 core_version_requirement: '^10.1 || ^11.0'
 'base theme': bootstrap5
 libraries:
-  - naranja_b5_subtheme/global-styling
+  - naranja_b5subtheme/global-styling
+  - naranja_b5subtheme/yaro-op
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:

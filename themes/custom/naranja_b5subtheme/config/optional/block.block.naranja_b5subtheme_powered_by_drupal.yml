@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - naranja_b5_subtheme
-id: naranja_b5_subtheme_powered_by_drupal
-theme: naranja_b5_subtheme
+    - naranja_b5subtheme
+id: naranja_b5subtheme_powered_by_drupal
+theme: naranja_b5subtheme
 region: footer
 weight: 0
 provider: null

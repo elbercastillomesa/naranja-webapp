@@ -1,4 +1,4 @@
-# Naranja Bootstrap5 theme
+# Naranja B5 subtheme theme
 
 [Bootstrap 5](https://www.drupal.org/project/bootstrap5) subtheme.
 

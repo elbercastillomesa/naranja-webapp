@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - naranja_b5_subtheme
-id: naranja_b5_subtheme_content
-theme: naranja_b5_subtheme
+    - naranja_b5subtheme
+id: naranja_b5subtheme_content
+theme: naranja_b5subtheme
 region: content
 weight: -1
 provider: null
