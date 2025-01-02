@@ -1,0 +1,20 @@
+{
+  "name": "drupal/ixm_blocks",
+  "type": "drupal-module",
+  "keywords": ["IXM Blocks", "ImageX Blocks"],
+  "license": "GPL-2.0+",
+  "description": "Custom blocks for typical IXM builds.",
+  "authors": [
+    {
+      "name": "Aaron Christian",
+      "homepage": "https://www.drupal.org/u/aaronchristian",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/core": "^8.7.7 || ^9 || ^10",
+    "drupal/lightning_media": "~4.0 || ~5.0",
+    "drupal/paragraphs": "~1.0",
+    "drupal/twig_tweak": "~3.0"
+  }
+}

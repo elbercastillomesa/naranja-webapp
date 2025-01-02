@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ixm_blocks_accordion_item
+label: 'Accordion Item'
+icon_uuid: null
+icon_default: null
+description: 'Subcomponent for the Accordion block.'
+behavior_plugins: {  }

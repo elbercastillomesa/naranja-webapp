@@ -1,0 +1,14 @@
+name: 'IXM Tabs Block'
+description: 'Helper module for the custom "Tabs" block type.'
+type: module
+core_version_requirement: ^8 || ^9 || ^10
+package: 'ImageX Media'
+dependencies:
+  - ixm_blocks:ixm_blocks
+  - paragraphs:paragraphs
+  - twig_tweak:twig_tweak
+
+# Information added by Drupal.org packaging script on 2024-03-13
+version: '1.0.7'
+project: 'ixm_blocks'
+datestamp: 1710364844
