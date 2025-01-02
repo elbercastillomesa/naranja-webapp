@@ -1,0 +1,25 @@
+uuid: a80d1842-50c7-472e-a986-0ffa6c1fe9cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5subtheme
+_core:
+  default_config_hash: QDknMgglcRY_u23brtUxdDtP6udYafmaZOwP04syi10
+id: naranja_b5subtheme_branding
+theme: naranja_b5subtheme
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

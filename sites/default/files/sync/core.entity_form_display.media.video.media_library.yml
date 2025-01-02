@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_file
     - media.type.video
 _core:
@@ -20,8 +21,17 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   created: true
+  field_media_in_library: true
   field_media_video_file: true
   name: true
   path: true

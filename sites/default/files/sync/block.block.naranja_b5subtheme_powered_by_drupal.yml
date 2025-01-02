@@ -1,0 +1,22 @@
+uuid: 9599a081-a53f-4642-8fde-84eb67f97f25
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5subtheme
+_core:
+  default_config_hash: WE97CzU21Hox9G0l1LAsS--jRI8P8qJwB_o8B2No5-c
+id: naranja_b5subtheme_powered_by_drupal
+theme: naranja_b5subtheme
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

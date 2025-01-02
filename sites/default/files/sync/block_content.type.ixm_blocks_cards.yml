@@ -1,0 +1,15 @@
+uuid: 3eca7d55-906b-473e-a5a6-6b86d58f6396
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_library
+third_party_settings:
+  block_library:
+    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_cards/images/ixm_blocks_cards.svg
+_core:
+  default_config_hash: A6hGFTv69FBDjJNXqzIVH7m7M6b0RN6Gp_RXSDF-wo4
+id: ixm_blocks_cards
+label: Cards
+revision: false
+description: 'A component for adding custom cards.'

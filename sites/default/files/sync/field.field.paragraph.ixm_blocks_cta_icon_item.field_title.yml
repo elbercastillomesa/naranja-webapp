@@ -1,0 +1,21 @@
+uuid: 3c18fb1f-b335-4811-8a3d-36f2469c3c5e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.ixm_blocks_cta_icon_item
+_core:
+  default_config_hash: nM4vr5AL6XKZKyleevERoLRSGj2CabVTl2a5D1huLkg
+id: paragraph.ixm_blocks_cta_icon_item.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: ixm_blocks_cta_icon_item
+label: Título
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

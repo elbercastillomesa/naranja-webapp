@@ -1,0 +1,12 @@
+uuid: e9076e49-e980-4941-879e-c19037cc46d6
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6XzIGelH5MKSjpS6Nj6CTGYu02AI7j5VZzOa6hkgFsA
+id: ixm_blocks_card
+label: Tarjeta
+icon_uuid: null
+icon_default: null
+description: 'Subcomponent for the Cards block.'
+behavior_plugins: {  }

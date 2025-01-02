@@ -1,0 +1,39 @@
+uuid: 743b6a46-e41f-47d3-a24b-f28b47ac2922
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ixm_blocks_cards
+    - field.storage.block_content.field_entity_reference_paragraph
+    - paragraphs.paragraphs_type.ixm_blocks_card
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: zpHXxvZXhx6WxGSZHiyGAnG1oYkGMepSOfbk2apEIKE
+id: block_content.ixm_blocks_cards.field_entity_reference_paragraph
+field_name: field_entity_reference_paragraph
+entity_type: block_content
+bundle: ixm_blocks_cards
+label: Tarjeta
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ixm_blocks_card: ixm_blocks_card
+    negate: 0
+    target_bundles_drag_drop:
+      ixm_blocks_accordion_item:
+        weight: 4
+        enabled: false
+      ixm_blocks_card:
+        weight: 5
+        enabled: true
+      ixm_blocks_hero_banner:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

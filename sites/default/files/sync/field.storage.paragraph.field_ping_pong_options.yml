@@ -1,0 +1,26 @@
+uuid: 220ca434-c831-4640-af9e-1f6ed1a19327
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: WBiiBWQpZtrbZw5JmvYw8BoQDNo3IF3HxFMDCjFYJD0
+id: paragraph.field_ping_pong_options
+field_name: field_ping_pong_options
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Reversed
+      label: Invertido
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

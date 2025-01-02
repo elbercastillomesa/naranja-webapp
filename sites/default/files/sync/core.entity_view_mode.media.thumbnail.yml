@@ -1,0 +1,13 @@
+uuid: 527c5b72-399b-4639-9152-c399bc2d8290
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: I96Wg1zkC_ifckgDqnlaevl6IHNCdyIMmmsckbYTeag
+id: media.thumbnail
+label: Miniatura
+description: ''
+targetEntityType: media
+cache: true

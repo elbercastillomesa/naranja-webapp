@@ -1,0 +1,25 @@
+uuid: af07f33f-11fb-4c1a-9a97-e459a631b05b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.ixm_blocks_ping_pong_item
+  module:
+    - link
+_core:
+  default_config_hash: kpMDY1K2S2VnnGFm87bHd0aPqIP309n-88Pv69CTGkg
+id: paragraph.ixm_blocks_ping_pong_item.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: ixm_blocks_ping_pong_item
+label: Enlaces
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

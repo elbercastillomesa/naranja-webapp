@@ -1,0 +1,28 @@
+uuid: ac81cbb4-145f-4282-85ce-3e870093738e
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ixm_blocks_cards
+    - field.storage.block_content.field_content_reference
+_core:
+  default_config_hash: 5RTM45XyY6APl1HuT_GpuSWgusNCGzRKWe2ZM7a7wo0
+id: block_content.ixm_blocks_cards.field_content_reference
+field_name: field_content_reference
+entity_type: block_content
+bundle: ixm_blocks_cards
+label: 'Card from Node'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
