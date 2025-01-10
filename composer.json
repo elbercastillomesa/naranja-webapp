@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.5",
+        "drupal/block_library": "^1.0",
         "drupal/bookable_calendar": "2.2.12",
         "drupal/bootstrap5": "^4.0",
         "drupal/bootstrap_layout_builder": "^2.2",
