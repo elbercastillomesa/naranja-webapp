@@ -8,28 +8,50 @@ module:
   block: 0
   block_content: 0
   bookable_calendar: 0
+  bootstrap_layout_builder: 0
+  bootstrap_styles: 0
   breakpoint: 0
   calendar_view: 0
   calendar_view_multiday: 0
   ckeditor5: 0
+  color: 0
   comment: 0
   config: 0
   contact: 0
+  content_as_config: 0
+  content_moderation: 0
   contextual: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
   help: 0
   history: 0
   image: 0
+  ixm_blocks: 0
+  ixm_blocks_accordion: 0
+  ixm_blocks_cards: 0
+  ixm_blocks_carousel: 0
+  ixm_blocks_hero: 0
+  ixm_blocks_ping_pong: 0
   language: 0
+  layout_builder: 0
+  layout_discovery: 0
+  lightning_media: 0
+  lightning_media_image: 0
+  lightning_media_video: 0
   link: 0
   locale: 0
+  media: 0
+  media_library: 0
+  media_library_form_element: 0
+  media_library_theme_reset: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
@@ -47,13 +69,18 @@ module:
   telephone: 0
   text: 0
   toolbar: 0
-  tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   views_ui: 0
+  workflows: 0
+  ds: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
-  olivero: 0
   claro: 0
+  stable9: 0
+  bootstrap5: 0
+  naranja_b5subtheme: 0
 profile: standard

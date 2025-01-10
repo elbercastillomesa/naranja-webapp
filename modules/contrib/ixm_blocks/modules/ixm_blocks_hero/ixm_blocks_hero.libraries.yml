@@ -1,0 +1,24 @@
+# Hero Banner > Base styles.
+hero-styles:
+  css:
+    theme:
+      css/hero.css: { }
+
+# Hero Banner > Local Video Integration.
+hero-html5-player:
+  version: VERSION
+  js:
+    js/hero-html5-player.js: { minified: false }
+
+# Hero Banner > Vimeo Integration.
+hero-vimeo-player:
+  version: VERSION
+  js:
+    //player.vimeo.com/api/player.js:
+      type: external
+      minified: false
+    js/hero-vimeo-player.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

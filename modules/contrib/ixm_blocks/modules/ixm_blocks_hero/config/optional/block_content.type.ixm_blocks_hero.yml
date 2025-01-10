@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  block_library:
+    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_hero/images/ixm_blocks_hero.svg
+id: ixm_blocks_hero
+label: 'Hero Banner'
+revision: 0
+description: 'A component for adding hero banners.'

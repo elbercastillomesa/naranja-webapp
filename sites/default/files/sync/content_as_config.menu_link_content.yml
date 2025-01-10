@@ -1,0 +1,75 @@
+6d8995ea-9613-4d2a-8c74-44b0c0f3d52d:
+  uuid: 6d8995ea-9613-4d2a-8c74-44b0c0f3d52d
+  menu_name: main
+  title: Internet
+  parent: ''
+  link:
+    -
+      uri: 'internal:/planes-de-internet'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '-50'
+  langcode: es
+fb436e5c-4234-4be2-b708-789c9adc59da:
+  uuid: fb436e5c-4234-4be2-b708-789c9adc59da
+  menu_name: main
+  title: Televisión
+  parent: ''
+  link:
+    -
+      uri: 'internal:/television'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '-49'
+  langcode: es
+060d1487-2c81-4b65-afb4-c2c30f074a89:
+  uuid: 060d1487-2c81-4b65-afb4-c2c30f074a89
+  menu_name: main
+  title: Combos
+  parent: ''
+  link:
+    -
+      uri: 'internal:/combos'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '-47'
+  langcode: es
+1f5d5c12-b173-4264-8e0f-16dcd98a5236:
+  uuid: 1f5d5c12-b173-4264-8e0f-16dcd98a5236
+  menu_name: main
+  title: 'Naranja Play'
+  parent: ''
+  link:
+    -
+      uri: 'internal:/naranja-play'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '-48'
+  langcode: es
+98a08f6d-437d-4788-9770-edf31560e843:
+  uuid: 98a08f6d-437d-4788-9770-edf31560e843
+  menu_name: main
+  title: Soporte
+  parent: ''
+  link:
+    -
+      uri: 'internal:/soporte-tecnico'
+      title: ''
+      options: {  }
+  description: ''
+  enabled: '1'
+  expanded: '0'
+  weight: '-45'
+  langcode: es

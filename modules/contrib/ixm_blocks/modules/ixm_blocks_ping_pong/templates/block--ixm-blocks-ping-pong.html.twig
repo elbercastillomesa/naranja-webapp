@@ -1,0 +1,135 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+
+{% set ping_pong_id = 'ping-pong-' ~ configuration['block_revision_id'] %}
+
+<div{{ attributes.addClass(classes).setAttribute('id', plugin_id|clean_class ~ configuration['block_revision_id']) }}>
+
+  {{ title_prefix }}
+  {% if label %}
+    <h3{{ title_attributes.addClass('mb-5') }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block content %}
+  <div id="{{ ping_pong_id }}">
+
+    {# ping pong items #}
+    {% if content.field_entity_reference_paragraph %}
+      {% for key, item in content.field_entity_reference_paragraph|filter((value, key) => key|first != '#') %}
+        {% set safe_hash = configuration['block_revision_id'] ~ '--' ~ loop.index %}
+
+        {% set pp_attr = create_attribute() %}
+        {%
+          set pp_classes = [
+          'ping-pong-item',
+          'shadow-lg',
+          not loop.first ? 'mt-5',
+        ]
+        %}
+
+        {# If the "Reversed" option is checked, add it to our row. #}
+        {% set reversed = false %}
+        {% if 'Reversed' in item['#paragraph'].field_ping_pong_options.value %}
+          {% set reversed = true %}
+        {% endif %}
+
+        {# Setup our image style. #}
+        {# @todo: make this a setting from the module, check if d8 is installed vs. d9, pass media_image as a variable instead. #}
+        {% if item['#paragraph'].field_media_element.0.entity.image.entity.uri.value %}
+          {# lightning_media_image 8.x-3x source_field: [image] #}
+          {% set media_image = item['#paragraph'].field_media_element.0.entity.image.entity.uri.value %}
+          {% set image_alt = item['#paragraph'].field_media_element.0.entity.image.0.alt %}
+        {% elseif item['#paragraph'].field_media_element.0.entity.field_media_image.entity.uri.value %}
+          {# lightning_media_image 8.x-4x source_field: [field_media_image] #}
+          {% set media_image = item['#paragraph'].field_media_element.0.entity.field_media_image.entity.uri.value %}
+          {% set image_alt = item['#paragraph'].field_media_element.0.entity.field_media_image.0.alt %}
+        {% endif %}
+
+        {% if media_image %}
+          {% set image = file_url(media_image|image_style('large')) %}
+        {% endif %}
+
+        <div{{ pp_attr.addClass(pp_classes) }}>
+          <div class="row g-0 {% if reversed %}flex-md-row-reverse{% endif %}">
+
+            {# image #}
+            <div class="col-12 col-md-5" {% if image %}style="background: url('{{ image }}') center center no-repeat; background-size: cover; min-height: 200px;"{% endif %}>
+              {% if image %}
+                <img src="{{ image }}" class="d-none" alt="{{ image_alt }}">
+              {% else %}
+                <svg class="carousel-placeholder-img d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Slide {{ loop.index }}" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>{{ 'Placeholder'|t }}</title>
+                  <rect width="100%" height="100%" fill="#555"></rect>
+                </svg>
+              {% endif %}
+            </div>
+
+            {# content #}
+            <div class="col-12 col-md-7">
+              <div class="p-5">
+
+                {% if item['#paragraph'].field_title %}
+                  <h3>{{ item['#paragraph'].field_title.value }}</h3>
+                {% endif %}
+
+                {% if item['#paragraph'].field_body %}
+                  {{ item['#paragraph'].field_body.value|raw }}
+                {% endif %}
+
+                {% if item['#paragraph'].field_links is not empty %}
+                  <div class="row flex-wrap mx-n2">
+                    {% set numLinksIndex = item['#paragraph'].field_links|length - 1 %}
+                    {% for i in 0..numLinksIndex %}
+                      <div class="col-auto px-2 cta-link my-2">
+                        <a href="{{ item['#paragraph'].field_links[i].uri.toString() }}"
+                           class="btn {{ loop.first ? 'btn-primary' : 'btn-secondary' }}">
+                          {{ item['#paragraph'].field_links[i].title }}
+                        </a>
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endblock %}
+
+</div>

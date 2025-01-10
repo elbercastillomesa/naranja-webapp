@@ -1,0 +1,12 @@
+uuid: e18b07d1-1121-467d-8441-ce99eb8813d4
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _irAK46n4qqZ8V5GSdLpWbOiJ2lspLZs6dGvBtZ75RA
+id: ixm_blocks_carousel_item
+label: 'Carousel Item'
+icon_uuid: null
+icon_default: null
+description: 'Subcomponent for the Carousel block.'
+behavior_plugins: {  }

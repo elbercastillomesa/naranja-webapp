@@ -1,0 +1,22 @@
+uuid: 7c61800d-b5db-4bfa-b586-0cac364a6c60
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5subtheme
+_core:
+  default_config_hash: 0iZOmcIuUupCMC8ax4xYUN3WcrZhzO0H4MmxlNUIbIM
+id: naranja_b5subtheme_content
+theme: naranja_b5subtheme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

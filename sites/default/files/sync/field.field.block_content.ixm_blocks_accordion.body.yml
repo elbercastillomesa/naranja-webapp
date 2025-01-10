@@ -1,0 +1,26 @@
+uuid: 694c2cc0-a7f7-46fb-97c2-63512cd8b4e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ixm_blocks_accordion
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: TGpKXW3aFGSYqvDbS99X1zINVd2ZX_1_h0RFM-vYmb0
+id: block_content.ixm_blocks_accordion.body
+field_name: body
+entity_type: block_content
+bundle: ixm_blocks_accordion
+label: Cuerpo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

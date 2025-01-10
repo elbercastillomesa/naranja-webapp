@@ -1,0 +1,30 @@
+uuid: 36b0da49-cf3f-4c16-9abe-0c661f573f68
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_element
+    - media.type.image
+    - paragraphs.paragraphs_type.ixm_blocks_card
+_core:
+  default_config_hash: bZuNdssc9vhC0ieKPSSrIVvQ1QfeDLLQtQjBsBeAgvk
+id: paragraph.ixm_blocks_card.field_media_element
+field_name: field_media_element
+entity_type: paragraph
+bundle: ixm_blocks_card
+label: 'Media '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

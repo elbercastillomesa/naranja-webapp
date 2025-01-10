@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+{%
+  set classes = [
+  'block',
+  'block-' ~ configuration.provider|clean_class,
+  'block-' ~ plugin_id|clean_class,
+]
+%}
+
+{% set modal_id = 'modal-' ~ configuration['block_revision_id'] %}
+
+<div{{ attributes.addClass(classes).setAttribute('id', plugin_id|clean_class ~ configuration['block_revision_id']) }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <!-- Modal -->
+  <div id="{{ modal_id }}" class="modal fade" tabindex="-1" {% if label %}aria-labelledby="{{ modal_id ~ '-title' }}"{% endif %} aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          {% if label %}
+            <h5{{ title_attributes.setAttribute('id', modal_id ~ '-title') }}>{{ label }}</h5>
+          {% endif %}
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        {% block content %}
+        <div class="modal-body">
+          {{ content.body }}
+        </div>
+        {% endblock %}
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+  {% if content.field_modal_trigger %}
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{ modal_id }}">
+    {{ content.field_modal_trigger }}
+  </button>
+  {% endif %}
+
+</div>
