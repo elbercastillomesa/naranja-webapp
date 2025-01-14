@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  block_library:
+    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_cta_icons/images/ixm_blocks_cta_icons.svg
+id: ixm_blocks_cta_icons
+label: 'CTA Icons'
+revision: 0
+description: 'A component for adding custom CTA Icons.'

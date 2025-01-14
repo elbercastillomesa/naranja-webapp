@@ -3,6 +3,9 @@ langcode: es
 status: true
 dependencies:
   config:
+    - core.entity_view_display.node.blog.default
+    - filter.format.basic_html
+    - filter.format.restricted_html
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -10,13 +13,14 @@ dependencies:
     - comment
     - contextual
     - file
+    - filter
     - help
+    - layout_builder
     - node
     - path
     - system
     - taxonomy
     - toolbar
-    - tour
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -30,8 +34,9 @@ permissions:
   - 'access files overview'
   - 'access help pages'
   - 'access toolbar'
-  - 'access tour'
   - 'administer url aliases'
+  - 'configure all blog node layout overrides'
+  - 'configure editable blog node layout overrides'
   - 'create article content'
   - 'create page content'
   - 'create terms in tags'
@@ -46,6 +51,8 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

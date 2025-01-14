@@ -1,0 +1,27 @@
+uuid: ab965761-dac3-45bb-9271-bb8a5bf05e96
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: ses6BZnexwdB6G6o0ft5KeScaI0zQcOL4pIhbaoT8Es
+id: naranja_b5_subtheme_footer
+theme: naranja_b5_subtheme
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Pie de página'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

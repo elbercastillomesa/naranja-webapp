@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  block_library:
+    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_ping_pong/images/ixm_blocks_ping_pong.svg
+id: ixm_blocks_ping_pong
+label: Ping-Pong
+revision: 0
+description: 'A component for adding custom Ping-Pong blocks.'

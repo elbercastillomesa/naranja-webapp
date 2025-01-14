@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_banner_mobile
+label: 'Hero Banner - Mobile (992 x 1354)'
+effects:
+  1503a47e-d18c-4f20-989c-c780275f11e2:
+    uuid: 1503a47e-d18c-4f20-989c-c780275f11e2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 992
+      height: 1354
+      anchor: center-center

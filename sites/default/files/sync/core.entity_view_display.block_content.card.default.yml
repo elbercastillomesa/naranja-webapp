@@ -1,0 +1,42 @@
+uuid: 7582ed75-0d5b-4e0b-8f57-55b8c956e3b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_title
+  module:
+    - text
+id: block_content.card.default
+targetEntityType: block_content
+bundle: card
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

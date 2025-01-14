@@ -1,0 +1,13 @@
+uuid: fa9db98b-081b-4460-83b9-c28a8b6e9c56
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: CsK6TseQ2DatEbZgbd30swOlZ28_HHwAESU2LvEnWq0
+id: media_unpublish_action
+label: 'Medio no publicado'
+type: media
+plugin: 'entity:unpublish_action:media'
+configuration: {  }

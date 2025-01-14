@@ -1,0 +1,20 @@
+uuid: ee3f1ddb-133f-47d1-a4cc-adf4b1e96dca
+langcode: es
+status: true
+dependencies:
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: Q31w-Gex-3feKZCP20oeO1vLEtzxrQk6cF4gFGKxGeQ
+id: naranja_b5_subtheme_local_actions
+theme: naranja_b5_subtheme
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

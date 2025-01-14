@@ -1,0 +1,19 @@
+uuid: 1950da03-2e5e-4272-9fca-b157e1fcb654
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_title
+id: block_content.card.field_title
+field_name: field_title
+entity_type: block_content
+bundle: card
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

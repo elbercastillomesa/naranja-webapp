@@ -1,0 +1,22 @@
+uuid: 5e33a57c-0e07-4624-b0fc-cc0fca19da20
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5_subtheme
+_core:
+  default_config_hash: N_MkGXVE8q7qkhEVeRI2PK_82NadHyY8frZjGP4qOOw
+id: naranja_b5_subtheme_breadcrumbs
+theme: naranja_b5_subtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }
