@@ -1,0 +1,28 @@
+uuid: 6e0576cf-2582-46c3-a033-eedf873b0994
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ixm_blocks_carousel
+    - field.field.block_content.ixm_blocks_carousel.field_entity_reference_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: FiY1aXh4zqc_B-0jiYi-b2I1jbNxaxuYs0ZAcpxhn-k
+id: block_content.ixm_blocks_carousel.default
+targetEntityType: block_content
+bundle: ixm_blocks_carousel
+mode: default
+content:
+  field_entity_reference_paragraph:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

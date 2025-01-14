@@ -1,0 +1,13 @@
+uuid: f60e5cd7-cbb7-4d12-8421-d96c3b313c34
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: IvohHEiv_tHXtdBNMu7elD10mqN5cVonX-h3Z4vCpZs
+id: media.embedded
+label: Incrustado
+description: ''
+targetEntityType: media
+cache: true

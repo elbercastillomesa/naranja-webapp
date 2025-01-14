@@ -1,0 +1,23 @@
+uuid: 7aed6bb3-659f-45d0-8ad6-b78e920d7452
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ping_pong_options
+    - paragraphs.paragraphs_type.ixm_blocks_ping_pong_item
+  module:
+    - options
+_core:
+  default_config_hash: XrKVhaU3SIMJkDo9BRNij35hu_cDJI8Ou7pj6_prRPM
+id: paragraph.ixm_blocks_ping_pong_item.field_ping_pong_options
+field_name: field_ping_pong_options
+entity_type: paragraph
+bundle: ixm_blocks_ping_pong_item
+label: Opciones
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

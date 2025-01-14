@@ -1,0 +1,12 @@
+uuid: 87d92353-d26f-4bba-bcd8-edf98b9a3dab
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: '-BoACcElv8IRuLdtRU56X4yKYRFJTd_zMXECv1cpdhQ'
+id: ixm_blocks_hero_banner
+label: 'Hero Banner'
+icon_uuid: null
+icon_default: null
+description: 'Subcomponent for the Hero block.'
+behavior_plugins: {  }

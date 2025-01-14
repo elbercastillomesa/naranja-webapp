@@ -1,0 +1,12 @@
+uuid: 05d13afb-293a-491d-a76a-84bceda71ef8
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _80B94Foo4A4qUzaQbs8TKFCeZWfyJvS5nOv6LmfuC8
+id: ixm_blocks_ping_pong_item
+label: 'Ping-Pong Item'
+icon_uuid: null
+icon_default: null
+description: 'Subcomponent for the Ping-Pong block.'
+behavior_plugins: {  }

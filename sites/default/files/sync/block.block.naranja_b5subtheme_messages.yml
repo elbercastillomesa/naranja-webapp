@@ -1,0 +1,22 @@
+uuid: 04a12d3b-bf77-4f48-8ce9-09440327b176
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - naranja_b5subtheme
+_core:
+  default_config_hash: IVGdOUWSHESnJLbk-nxe5SRT9d_RQILvhkdZ-F_m1Jk
+id: naranja_b5subtheme_messages
+theme: naranja_b5subtheme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  label_display: '0'
+  provider: system
+visibility: {  }

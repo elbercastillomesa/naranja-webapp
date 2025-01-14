@@ -1,0 +1,29 @@
+uuid: 5ccb776c-42c0-486a-a2d3-0c8702d374e8
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.blog
+  module:
+    - system
+    - views
+  theme:
+    - naranja_b5subtheme
+id: naranja_b5subtheme_views_block__blog_block_blog
+theme: naranja_b5subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:blog-block_blog'
+settings:
+  id: 'views_block:blog-block_blog'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

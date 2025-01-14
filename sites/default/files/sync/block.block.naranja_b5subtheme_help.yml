@@ -1,0 +1,22 @@
+uuid: e9d99942-07ce-4ccd-91be-852ddda7b9be
+langcode: es
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - naranja_b5subtheme
+_core:
+  default_config_hash: BXWu5ZhfXVNGgC6Y6dzHgcFw_ox6_-y0c_Ky2v_kfwU
+id: naranja_b5subtheme_help
+theme: naranja_b5subtheme
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 2a965739-9381-4824-b516-2412124bab0a
+langcode: es
+status: true
+dependencies:
+  module:
+    - block_library
+third_party_settings:
+  block_library:
+    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_ping_pong/images/ixm_blocks_ping_pong.svg
+_core:
+  default_config_hash: XTBAojdYF8sZVMyRnSVXaeTsh5jNhMLlNR7wamH8LOQ
+id: ixm_blocks_ping_pong
+label: Ping-Pong
+revision: false
+description: 'A component for adding custom Ping-Pong blocks.'

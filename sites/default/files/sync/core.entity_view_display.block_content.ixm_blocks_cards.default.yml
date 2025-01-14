@@ -1,0 +1,30 @@
+uuid: 3d02d519-3b78-41f4-8b32-a6cdb279b146
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ixm_blocks_cards
+    - field.field.block_content.ixm_blocks_cards.field_content_reference
+    - field.field.block_content.ixm_blocks_cards.field_entity_reference_paragraph
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: 7IU5QZXTx1eY7PmbhDNAiipaQwLzwMj6zZOqlufQGIs
+id: block_content.ixm_blocks_cards.default
+targetEntityType: block_content
+bundle: ixm_blocks_cards
+mode: default
+content:
+  field_entity_reference_paragraph:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_content_reference: true
+  langcode: true
+  search_api_excerpt: true
