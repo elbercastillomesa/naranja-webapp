@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\image\Entity\ImageStyle;
+
 /**
  * @file
  * IXM Blocks Hero submodule.
@@ -15,4 +17,103 @@ function ixm_blocks_hero_theme($existing, $type, $theme, $path) {
       'template' => 'block--ixm-blocks-hero',
     ],
   ];
+}
+
+/**
+ * Preprocess function for the ixm_blocks_hero block.
+ */
+function ixm_blocks_hero_preprocess_block__ixm_blocks_hero(&$variables) {
+  $block_content = $variables['content']['#block_content'] ?? NULL;
+
+  if ($block_content && $block_content->hasField('field_entity_reference_paragraph')) {
+    $paragraphs = $block_content->get('field_entity_reference_paragraph')->referencedEntities();
+
+    foreach ($paragraphs as $delta => $paragraph) {
+      $media_items = [];
+
+      if ($paragraph->hasField('field_media_element') && !$paragraph->get('field_media_element')->isEmpty()) {
+        $media_entity = $paragraph->get('field_media_element')->entity;
+
+        if ($media_entity) {
+          $file_url_generator = \Drupal::service('file_url_generator');
+
+          // Image support.
+          if ($media_entity->hasField('field_media_image') && !$media_entity->get('field_media_image')->isEmpty()) {
+            $image_item = $media_entity->get('field_media_image')->first();
+
+            /**
+             * Generates image URLs using the file_url_generator service.
+             */
+            if ($image_item && $image_item->entity) {
+              $image_uri = $image_item->entity->getFileUri();
+              $alt_text = $image_item->get('alt')->value ?? '';
+
+              // Load the image styles and build the URLs.
+              $desktop_style = ImageStyle::load('hero_banner_desktop');
+              $mobile_style = ImageStyle::load('hero_banner_mobile');
+
+              // Generate styled image URLs using the new service methods.
+              $desktop_image_url = $file_url_generator->generateString($desktop_style->buildUrl($image_uri));
+              $mobile_image_url = $file_url_generator->generateString($mobile_style->buildUrl($image_uri));
+
+              $media_items[] = [
+                'type' => 'image',
+                'desktop_image' => $desktop_image_url,
+                'mobile_image' => $mobile_image_url,
+                'alt' => $alt_text,
+              ];
+            }
+          }
+
+          // Video support.
+          else {
+            $variables['#attached']['library'][] = 'ixm_blocks_hero/hero-player';
+
+            if ($media_entity->hasField('field_media_oembed_video') && !$media_entity->get('field_media_oembed_video')->isEmpty()) {
+              $media_url = $media_entity->get('field_media_oembed_video')->value;
+
+              // Check if it's a YouTube or Vimeo URL.
+              if (strpos($media_url, 'youtube') !== FALSE) {
+                $media_type = 'youtube_video';
+                $youtube_id = explode('v=', $media_url)[1];
+                $youtube_id = explode('&', $youtube_id)[0];
+                $variables['#attached']['drupalSettings']['heroPlayer'] = [
+                  'youtubeId' => $youtube_id,
+                ];
+              } elseif (strpos($media_url, 'vimeo.com') !== FALSE) {
+                $media_type = 'vimeo_video';
+                preg_match('/vimeo.com\/(\d+)/', $media_url, $matches);
+                $vimeo_id = $matches[1] ?? NULL;
+                $media['vimeoId'] = $vimeo_id;
+                $variables['#attached']['library'][] = 'ixm_blocks_hero/hero-vimeo-player';
+              }
+
+              $media_items[] = [
+                'type' => $media_type,
+                'url' => $media_url,
+                'youtubeId' => $youtube_id ?? NULL,
+                'vimeoId' => $vimeo_id ?? NULL,
+              ];
+            }
+
+            // Handle local video file
+            elseif ($media_entity->hasField('field_media_video_file') && !$media_entity->get('field_media_video_file')->isEmpty()) {
+              $video_file = $media_entity->get('field_media_video_file')->entity;
+              if ($video_file) {
+                $media_url = $file_url_generator->generateString($video_file->getFileUri());
+                $media_type = 'local_video';
+                $media_items[] = [
+                  'type' => $media_type,
+                  'url' => $media_url,
+                ];
+              }
+            }
+          }
+        }
+      }
+
+      // Add media items to the render array of the paragraph field.
+      $variables['content']['field_entity_reference_paragraph'][$delta]['#media_items'] = $media_items;
+    }
+  }
 }

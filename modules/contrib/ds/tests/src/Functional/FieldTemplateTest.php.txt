@@ -8,11 +8,10 @@ use Drupal\Core\Cache\Cache;
  * Tests for display of nodes and fields.
  *
  * For some reason, ds_test_form_entity_view_display_edit_form_alter fails
- * on the pipeline, no idea why. So the group is ds_disabled which I use locally
- * to run the tests and methods are prefixed with _ in version control so the
- * bot doesn't run any tests.
+ * on the pipeline, no idea why. So this file is currently located in this
+ * directory and only runs locally from time to time.
  *
- * @group ds_disabled
+ * @group ds
  */
 class FieldTemplateTest extends TestBase {
 
@@ -31,7 +30,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests on field templates.
    */
-  public function _testDsFieldTemplate() {
+  public function testDsFieldTemplate() {
 
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
@@ -65,7 +64,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests on field templates.
    */
-  public function _testDsFieldTemplate2() {
+  public function testDsFieldTemplate2() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
     $body_field = $node->get('body')->value;
@@ -135,7 +134,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests on field templates.
    */
-  public function _testDsFieldTemplate3() {
+  public function testDsFieldTemplate3() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
     $body_field = $node->get('body')->value;
@@ -185,7 +184,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests on field templates.
    */
-  public function _testDsFieldTemplate4() {
+  public function testDsFieldTemplate4() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
     $body_field = $node->get('body')->value;
@@ -263,7 +262,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests on field templates.
    */
-  public function _testDsFieldTemplate5() {
+  public function testDsFieldTemplate5() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
     $body_field = $node->get('body')->value;
@@ -470,7 +469,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests XSS on field templates.
    */
-  public function _testDsFieldTemplateXss() {
+  public function testDsFieldTemplateXss() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
 
@@ -511,7 +510,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests multiple field items.
    */
-  public function _testDsMultipleFieldItems() {
+  public function testDsMultipleFieldItems() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
 
@@ -549,7 +548,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests minimal template functionality.
    */
-  public function _testFieldTemplateMinimal() {
+  public function testFieldTemplateMinimal() {
     // Get a node.
     $node = $this->entitiesTestSetup('hidden');
     $body_field = $node->get('body')->value;
@@ -604,7 +603,7 @@ class FieldTemplateTest extends TestBase {
   /**
    * Tests default selection of global template.
    */
-  public function _testDefaultFieldTemplateMinimal() {
+  public function testDefaultFieldTemplateMinimal() {
 
     // Set default to minimal.
     \Drupal::configFactory()->getEditable('ds.settings')

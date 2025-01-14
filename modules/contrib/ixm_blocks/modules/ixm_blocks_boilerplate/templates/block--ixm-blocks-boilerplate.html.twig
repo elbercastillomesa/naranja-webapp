@@ -49,7 +49,7 @@
     </div>
 
     <div class="boilerplate" id="{{ boilerplate_id }}">
-      {% for key, item in content.field_entity_reference_paragraph if key|first != '#' %}
+      {% for key, item in content.field_entity_reference_paragraph|filter((value, key) => key|first != '#') %}
         {% set safe_hash = configuration['block_revision_id'] ~ '--' ~ loop.index %}
         <h2 class="boilerplate-title" id="heading-{{ safe_hash }}">
           {{ item['#paragraph'].field_title.value|raw }}

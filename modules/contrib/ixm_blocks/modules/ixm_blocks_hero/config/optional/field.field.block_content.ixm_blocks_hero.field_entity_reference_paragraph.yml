@@ -20,14 +20,14 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       ixm_blocks_hero_banner: ixm_blocks_hero_banner
+    negate: 0
     target_bundles_drag_drop:
       ixm_blocks_accordion_item:
         weight: 3
         enabled: false
       ixm_blocks_hero_banner:
-        enabled: true
         weight: 4
+        enabled: true
 field_type: entity_reference_revisions

@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_media_element
     - media.type.image
+    - media.type.remote_video
     - media.type.video
-    - media.type.video_file
     - paragraphs.paragraphs_type.ixm_blocks_hero_banner
 id: paragraph.ixm_blocks_hero_banner.field_media_element
 field_name: field_media_element
@@ -22,10 +22,11 @@ settings:
   handler_settings:
     target_bundles:
       image: image
+      remote_video: remote_video
       video: video
-      video_file: video_file
     sort:
       field: _none
+      direction: ASC
     auto_create: false
     auto_create_bundle: image
 field_type: entity_reference
