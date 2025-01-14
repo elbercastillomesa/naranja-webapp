@@ -357,17 +357,17 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "4.10.0",
-            "version_normalized": "4.10.0.0",
+            "version": "4.10.1",
+            "version_normalized": "4.10.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "1e830ba908c9ffb1ba7ca056203531b27188812c"
+                "reference": "362310b13ececa9f6f0a4a880811fa08fecc348b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/1e830ba908c9ffb1ba7ca056203531b27188812c",
-                "reference": "1e830ba908c9ffb1ba7ca056203531b27188812c",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/362310b13ececa9f6f0a4a880811fa08fecc348b",
+                "reference": "362310b13ececa9f6f0a4a880811fa08fecc348b",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +384,7 @@
                 "squizlabs/php_codesniffer": "^3",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2024-04-05T21:05:39+00:00",
+            "time": "2024-12-13T19:55:40+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -410,7 +410,7 @@
             "description": "Initialize Symfony Console commands from annotated command class methods.",
             "support": {
                 "issues": "https://github.com/consolidation/annotated-command/issues",
-                "source": "https://github.com/consolidation/annotated-command/tree/4.10.0"
+                "source": "https://github.com/consolidation/annotated-command/tree/4.10.1"
             },
             "install-path": "../consolidation/annotated-command"
         },
@@ -778,17 +778,17 @@
         },
         {
             "name": "consolidation/site-alias",
-            "version": "4.1.0",
-            "version_normalized": "4.1.0.0",
+            "version": "4.1.1",
+            "version_normalized": "4.1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-alias.git",
-                "reference": "1056ceb93f6aafe6f7600d7bbe1b62b8488abccf"
+                "reference": "aff6189aae17da813d23249cb2fc0fff33f26d40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/1056ceb93f6aafe6f7600d7bbe1b62b8488abccf",
-                "reference": "1056ceb93f6aafe6f7600d7bbe1b62b8488abccf",
+                "url": "https://api.github.com/repos/consolidation/site-alias/zipball/aff6189aae17da813d23249cb2fc0fff33f26d40",
+                "reference": "aff6189aae17da813d23249cb2fc0fff33f26d40",
                 "shasum": ""
             },
             "require": {
@@ -804,7 +804,7 @@
                 "symfony/var-dumper": "^4",
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
-            "time": "2024-04-05T15:58:04+00:00",
+            "time": "2024-12-13T19:05:11+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -834,23 +834,23 @@
             "description": "Manage alias records for local and remote sites.",
             "support": {
                 "issues": "https://github.com/consolidation/site-alias/issues",
-                "source": "https://github.com/consolidation/site-alias/tree/4.1.0"
+                "source": "https://github.com/consolidation/site-alias/tree/4.1.1"
             },
             "install-path": "../consolidation/site-alias"
         },
         {
             "name": "consolidation/site-process",
-            "version": "5.4.0",
-            "version_normalized": "5.4.0.0",
+            "version": "5.4.2",
+            "version_normalized": "5.4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/site-process.git",
-                "reference": "7ab3ffe4195a89b8dc334ea22e7881abe79ffd9a"
+                "reference": "e7fafc40ebfddc1a5ee99ee66e5d186fc1bed4da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/site-process/zipball/7ab3ffe4195a89b8dc334ea22e7881abe79ffd9a",
-                "reference": "7ab3ffe4195a89b8dc334ea22e7881abe79ffd9a",
+                "url": "https://api.github.com/repos/consolidation/site-process/zipball/e7fafc40ebfddc1a5ee99ee66e5d186fc1bed4da",
+                "reference": "e7fafc40ebfddc1a5ee99ee66e5d186fc1bed4da",
                 "shasum": ""
             },
             "require": {
@@ -864,7 +864,7 @@
                 "phpunit/phpunit": "^9",
                 "squizlabs/php_codesniffer": "^3"
             },
-            "time": "2024-04-06T00:00:28+00:00",
+            "time": "2024-12-13T19:25:56+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -894,7 +894,7 @@
             "description": "A thin wrapper around the Symfony Process Component that allows applications to use the Site Alias library to specify the target for a remote call.",
             "support": {
                 "issues": "https://github.com/consolidation/site-process/issues",
-                "source": "https://github.com/consolidation/site-process/tree/5.4.0"
+                "source": "https://github.com/consolidation/site-process/tree/5.4.2"
             },
             "install-path": "../consolidation/site-process"
         },
@@ -1360,6 +1360,65 @@
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             },
             "install-path": "../../modules/contrib/admin_toolbar"
+        },
+        {
+            "name": "drupal/block_library",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_library.git",
+                "reference": "1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_library-1.0.1.zip",
+                "reference": "1.0.1",
+                "shasum": "9880a3ecf126fa97d57e01946f55af98bb4d3a22"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10.3 || ^11",
+                "drupal/layout_builder_restrictions": "^2.7 || ^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.1",
+                    "datestamp": "1726329168",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mahmoud-zayed",
+                    "homepage": "https://www.drupal.org/user/2947001"
+                },
+                {
+                    "name": "rajab natshah",
+                    "homepage": "https://www.drupal.org/user/1414312"
+                }
+            ],
+            "description": "Adds additional functionality to the core block library.",
+            "homepage": "https://www.drupal.org/project/block_library",
+            "keywords": [
+                "Drupal",
+                "Layout Builder",
+                "block",
+                "custom",
+                "library"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_library"
+            },
+            "install-path": "../../modules/contrib/block_library"
         },
         {
             "name": "drupal/bookable_calendar",
@@ -2111,24 +2170,24 @@
         },
         {
             "name": "drupal/core-vendor-hardening",
-            "version": "10.3.10",
-            "version_normalized": "10.3.10.0",
+            "version": "10.4.1",
+            "version_normalized": "10.4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-vendor-hardening.git",
-                "reference": "ab21ce39e1236730da42b42db4de5ba1f5a8afa8"
+                "reference": "82bb33f8da23130afa412e239c72ce70a8dba690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/ab21ce39e1236730da42b42db4de5ba1f5a8afa8",
-                "reference": "ab21ce39e1236730da42b42db4de5ba1f5a8afa8",
+                "url": "https://api.github.com/repos/drupal/core-vendor-hardening/zipball/82bb33f8da23130afa412e239c72ce70a8dba690",
+                "reference": "82bb33f8da23130afa412e239c72ce70a8dba690",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2",
                 "php": ">=7.3.0"
             },
-            "time": "2024-08-22T14:31:34+00:00",
+            "time": "2024-11-11T20:22:36+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Drupal\\Composer\\Plugin\\VendorHardening\\VendorHardeningPlugin"
@@ -2149,7 +2208,7 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-vendor-hardening/tree/10.3.10"
+                "source": "https://github.com/drupal/core-vendor-hardening/tree/10.4.1"
             },
             "install-path": "../drupal/core-vendor-hardening"
         },
@@ -4174,17 +4233,17 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.3.1",
-            "version_normalized": "5.3.1.0",
+            "version": "v5.4.0",
+            "version_normalized": "5.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
+                "reference": "447a020a1f875a434d62f2a401f53b82a396e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
-                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/447a020a1f875a434d62f2a401f53b82a396e494",
+                "reference": "447a020a1f875a434d62f2a401f53b82a396e494",
                 "shasum": ""
             },
             "require": {
@@ -4197,7 +4256,7 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2024-10-08T18:51:32+00:00",
+            "time": "2024-12-30T11:07:19+00:00",
             "bin": [
                 "bin/php-parse"
             ],
@@ -4229,7 +4288,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.4.0"
             },
             "install-path": "../nikic/php-parser"
         },
@@ -5024,17 +5083,17 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.12.5",
-            "version_normalized": "0.12.5.0",
+            "version": "v0.12.7",
+            "version_normalized": "0.12.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "36a03ff27986682c22985e56aabaf840dd173cb5"
+                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/36a03ff27986682c22985e56aabaf840dd173cb5",
-                "reference": "36a03ff27986682c22985e56aabaf840dd173cb5",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
+                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
                 "shasum": ""
             },
             "require": {
@@ -5056,7 +5115,7 @@
                 "ext-pdo-sqlite": "The doc command requires SQLite to work.",
                 "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well."
             },
-            "time": "2024-11-29T06:14:30+00:00",
+            "time": "2024-12-10T01:58:33+00:00",
             "bin": [
                 "bin/psysh"
             ],
@@ -5100,7 +5159,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.5"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.12.7"
             },
             "install-path": "../psy/psysh"
         },
@@ -5222,17 +5281,17 @@
         },
         {
             "name": "simshaun/recurr",
-            "version": "v5.0.2",
-            "version_normalized": "5.0.2.0",
+            "version": "v5.0.3",
+            "version_normalized": "5.0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simshaun/recurr.git",
-                "reference": "1aff62e6e0ee875b3f2487352542605123ee9172"
+                "reference": "7b136768d64f257065e38a804ee6d2f9af6ba6d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simshaun/recurr/zipball/1aff62e6e0ee875b3f2487352542605123ee9172",
-                "reference": "1aff62e6e0ee875b3f2487352542605123ee9172",
+                "url": "https://api.github.com/repos/simshaun/recurr/zipball/7b136768d64f257065e38a804ee6d2f9af6ba6d1",
+                "reference": "7b136768d64f257065e38a804ee6d2f9af6ba6d1",
                 "shasum": ""
             },
             "require": {
@@ -5243,7 +5302,7 @@
                 "phpunit/phpunit": "^8.5.16",
                 "symfony/yaml": "^5.3"
             },
-            "time": "2023-09-26T20:31:33+00:00",
+            "time": "2024-12-12T15:39:24+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5278,7 +5337,7 @@
             ],
             "support": {
                 "issues": "https://github.com/simshaun/recurr/issues",
-                "source": "https://github.com/simshaun/recurr/tree/v5.0.2"
+                "source": "https://github.com/simshaun/recurr/tree/v5.0.3"
             },
             "install-path": "../simshaun/recurr"
         },
