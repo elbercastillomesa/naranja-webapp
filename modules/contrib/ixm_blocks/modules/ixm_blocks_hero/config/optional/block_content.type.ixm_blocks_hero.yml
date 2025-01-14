@@ -6,5 +6,5 @@ third_party_settings:
     icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_hero/images/ixm_blocks_hero.svg
 id: ixm_blocks_hero
 label: 'Hero Banner'
-revision: 0
+revision: false
 description: 'A component for adding hero banners.'

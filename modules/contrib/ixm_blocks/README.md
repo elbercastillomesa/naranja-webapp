@@ -33,7 +33,7 @@ drush en ixm_blocks_[module_name] -y
 
 ### Images
 
-Each sub module comes with an icon that can be used with the block_library 
+Each sub module comes with an icon that can be used with the [block_library](https://www.drupal.org/project/block_library) 
 module. The module is shown in the offcanvas tray while using layout builder 
 for a more visually appealing UI. 
 

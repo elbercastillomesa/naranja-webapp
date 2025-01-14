@@ -17,6 +17,12 @@ having to maintain dozens of twig files.
 6. Click "Save"
 [Read more](https://drupal.org/node/1795282)
 
+## Adding custom layouts.
+
+Layouts are based on using the Drupal Core Layout API.
+See ds.layouts.yml for many examples.
+See https://www.drupal.org/docs/drupal-apis/layout-api
+
 ## BC settings
 
 - When setting the default field template to e.g. minimal, but only moving a

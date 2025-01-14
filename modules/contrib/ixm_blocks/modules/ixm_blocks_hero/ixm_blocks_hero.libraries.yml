@@ -4,21 +4,32 @@ hero-styles:
     theme:
       css/hero.css: { }
 
-# Hero Banner > Local Video Integration.
-hero-html5-player:
-  version: VERSION
+# Hero Banner > Videos
+hero-player:
   js:
-    js/hero-html5-player.js: { minified: false }
+    js/hero-player.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/once
 
-# Hero Banner > Vimeo Integration.
+# Hero Banner > Vimeo
 hero-vimeo-player:
-  version: VERSION
   js:
     //player.vimeo.com/api/player.js:
       type: external
-      minified: false
-    js/hero-vimeo-player.js: { minified: false }
-  dependencies:
-    - core/drupal
-    - core/jquery
-    - core/jquery.once
+      minified: true
+      weight: -1
+
+# Hero Banner > Swiper
+hero-swiper:
+  css:
+    theme:
+      //cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css:
+        type: external
+        minified: true
+  js:
+    //cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js:
+      type: external
+      minified: true
+    js/hero-swiper.js: { minified: false }
+

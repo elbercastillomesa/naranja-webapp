@@ -36,13 +36,13 @@ content:
     third_party_settings: {  }
   field_media_element:
     type: media_library_widget
-    label: hidden
+    weight: 0
+    region: content
     settings:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 0
-    region: content
+    label: hidden
   field_title:
     type: string_textfield
     weight: 1

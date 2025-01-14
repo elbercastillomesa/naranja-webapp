@@ -73,6 +73,7 @@ return array(
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/src'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
     'Dflydev\\DotAccessData\\' => array($vendorDir . '/dflydev/dot-access-data/src'),
+    'CssLint\\' => array($vendorDir . '/neilime/php-css-lint/src/CssLint'),
     'Consolidation\\SiteProcess\\' => array($vendorDir . '/consolidation/site-process/src'),
     'Consolidation\\SiteAlias\\' => array($vendorDir . '/consolidation/site-alias/src'),
     'Consolidation\\OutputFormatters\\' => array($vendorDir . '/consolidation/output-formatters/src'),

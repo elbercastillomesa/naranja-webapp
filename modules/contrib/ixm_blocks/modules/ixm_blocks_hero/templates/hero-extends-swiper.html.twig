@@ -1,0 +1,8 @@
+{% extends '@ixm_blocks_hero/block--ixm-blocks-hero.html.twig' %}
+
+{# Swiper #}
+{% set carousel_type = 'swiper' %}
+
+{% set carousel_classes = carousel_classes|default([])|merge([
+  'carousel-dark',
+]) %}

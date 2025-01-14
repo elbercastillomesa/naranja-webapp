@@ -1,0 +1,18 @@
+{% extends '@ixm_blocks_hero/block--ixm-blocks-hero.html.twig' %}
+
+{# Bootstrap (default) #}
+{% set carousel_classes = carousel_classes|default([])|merge([
+  'carousel-dark',
+  'carousel-fade',
+]) %}
+
+{# Override carousel attributes. #}
+{% set carousel_attributes = carousel_attributes|default(create_attribute({
+  'data-bs-ride': 'carousel',
+  'data-bs-touch': 'false',
+})) %}
+
+{# Override carousel item attributes. #}
+{% set carousel_item_attributes = carousel_item_attributes|default(create_attribute({
+  'data-bs-interval': '5000'
+})) %}

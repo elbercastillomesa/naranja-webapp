@@ -1,7 +1,7 @@
 name: 'Boilerplate'
 description: 'A boilerplate component to build from.'
 type: module
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^8 || ^9 || ^10 || ^11
 package: 'ImageX Media'
 dependencies:
   - ixm_blocks:ixm_blocks
@@ -9,7 +9,7 @@ dependencies:
 
 hidden: true
 
-# Information added by Drupal.org packaging script on 2024-03-13
-version: '1.0.7'
+# Information added by Drupal.org packaging script on 2025-01-09
+version: '1.0.9'
 project: 'ixm_blocks'
-datestamp: 1710364844
+datestamp: 1736466060

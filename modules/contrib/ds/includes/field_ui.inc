@@ -900,6 +900,11 @@ function _ds_field_ui_table_layouts($entity_type, $bundle, $view_mode, array &$f
       $entity_type_info = \Drupal::entityTypeManager()->getDefinition($entity_type);
       foreach ($entity_displays as $name) {
         $row = \Drupal::config($name)->get();
+
+        if (empty($row) || empty($row['mode']) || empty($row['targetEntityType']) || empty($row['bundle'])) {
+          continue;
+        }
+
         if ($row['mode'] === $view_mode) {
           continue;
         }
