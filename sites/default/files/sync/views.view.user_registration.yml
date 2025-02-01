@@ -281,7 +281,7 @@ display:
       menu:
         type: normal
         title: 'Registro de usuario'
-        weight: -43
+        weight: -48
         enabled: false
         menu_name: main
         parent: ''

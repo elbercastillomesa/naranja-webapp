@@ -1,0 +1,11 @@
+uuid: 98e4273b-ddde-4caa-8736-bed0c8d70ba1
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ubicacion_gmap
+id: block_content.ubicacion_gmap
+target_entity_type_id: block_content
+target_bundle: ubicacion_gmap
+default_langcode: site_default
+language_alterable: false

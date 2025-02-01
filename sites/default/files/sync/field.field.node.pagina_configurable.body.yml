@@ -1,0 +1,24 @@
+uuid: de233811-cdeb-4c99-9970-db48bf07bd63
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pagina_configurable
+  module:
+    - text
+id: node.pagina_configurable.body
+field_name: body
+entity_type: node
+bundle: pagina_configurable
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

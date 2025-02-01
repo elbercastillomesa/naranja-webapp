@@ -1,0 +1,8 @@
+uuid: 24c43ee7-4947-4672-9f5a-fc5910231af2
+langcode: es
+status: true
+dependencies: {  }
+id: ubicacion_gmap
+label: 'Ubicacion GMap'
+revision: false
+description: 'Bloque para mostrar convertir una dirección de texto a mapa de Google.'

@@ -1,0 +1,19 @@
+uuid: ad03876d-a79a-4e3b-97dc-ff05a708e1a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ubicacion_gmap
+    - field.storage.block_content.field_direccion_simple
+id: block_content.ubicacion_gmap.field_direccion_simple
+field_name: field_direccion_simple
+entity_type: block_content
+bundle: ubicacion_gmap
+label: 'Dirección Simple'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

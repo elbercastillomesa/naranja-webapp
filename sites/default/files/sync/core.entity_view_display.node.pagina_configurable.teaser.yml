@@ -1,0 +1,42 @@
+uuid: 1379ab21-e8b4-469c-8ca8-af60f64eee95
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pagina_configurable.body
+    - field.field.node.pagina_configurable.field_paragraph
+    - node.type.pagina_configurable
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.pagina_configurable.teaser
+targetEntityType: node
+bundle: pagina_configurable
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

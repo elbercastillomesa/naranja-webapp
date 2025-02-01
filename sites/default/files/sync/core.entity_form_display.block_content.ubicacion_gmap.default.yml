@@ -1,0 +1,36 @@
+uuid: 57a2ade7-6951-4aa0-8e51-b6646219e414
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ubicacion_gmap
+    - field.field.block_content.ubicacion_gmap.field_direccion_simple
+id: block_content.ubicacion_gmap.default
+targetEntityType: block_content
+bundle: ubicacion_gmap
+mode: default
+content:
+  field_direccion_simple:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

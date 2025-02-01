@@ -1,0 +1,37 @@
+uuid: e1934775-daf1-430c-a27f-ae6a8adb4b2f
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.ubicacion_gmap
+    - field.field.block_content.ubicacion_gmap.field_direccion_simple
+  module:
+    - simple_gmap
+id: block_content.ubicacion_gmap.default
+targetEntityType: block_content
+bundle: ubicacion_gmap
+mode: default
+content:
+  field_direccion_simple:
+    type: simple_gmap
+    label: hidden
+    settings:
+      include_map: true
+      include_static_map: false
+      include_link: false
+      include_text: false
+      iframe_height: '250'
+      iframe_width: '400'
+      iframe_title: ''
+      static_scale: 1
+      zoom_level: 16
+      link_text: use_address
+      map_type: m
+      langcode: en
+      apikey: ''
+      alt_text: 'Map location: %address'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,25 @@
+uuid: 3c7bf250-eeb3-4b51-8820-578d503f29b5
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:ubicacion_gmap:89d94064-bdc2-42d8-b25f-6e16df923e4b'
+  module:
+    - block_content
+  theme:
+    - dxpr_theme_naranja
+id: dxpr_theme_naranja_ubicacion
+theme: dxpr_theme_naranja
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:89d94064-bdc2-42d8-b25f-6e16df923e4b'
+settings:
+  id: 'block_content:89d94064-bdc2-42d8-b25f-6e16df923e4b'
+  label: Ubicacion
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
