@@ -1,0 +1,33 @@
+uuid: 8166aa96-3513-419b-aa0d-21406b6b3e0e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - paragraphs.paragraphs_type.ixm_blocks_hero_banner
+id: paragraph.ixm_blocks_hero_banner.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: ixm_blocks_hero_banner
+label: image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

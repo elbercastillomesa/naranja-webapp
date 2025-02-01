@@ -14,6 +14,7 @@ dependencies:
   module:
     - image
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - text
     - user
@@ -89,6 +90,13 @@ third_party_settings:
             weight: 3
             additional: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.blog.teaser
 targetEntityType: node
 bundle: blog
