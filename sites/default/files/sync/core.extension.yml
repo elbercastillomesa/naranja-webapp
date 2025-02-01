@@ -24,6 +24,9 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
+  dxpr_theme_helper: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -84,5 +87,7 @@ theme:
   claro: 0
   stable9: 0
   bootstrap5: 0
-  naranja_b5subtheme: 0
+  dxpr_theme: 0
+  dxpr_naranja: 0
+  dxpr_theme_naranja: 0
 profile: standard

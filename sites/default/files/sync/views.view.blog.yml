@@ -392,7 +392,7 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: true
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
@@ -402,7 +402,7 @@ display:
         style: false
         row: false
         fields: false
-      css_class: block-blog
+      css_class: card
       display_extenders: {  }
       block_description: 'Bloque: Blogs'
     cache_metadata:

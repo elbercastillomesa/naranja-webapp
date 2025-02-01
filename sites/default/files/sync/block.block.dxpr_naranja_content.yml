@@ -1,0 +1,22 @@
+uuid: 1de0e416-ffd9-4357-bd07-c154f9b8a184
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dxpr_naranja
+_core:
+  default_config_hash: FR6TscQ_wWvu_Oif0Ha6seHBgJwsupKvwisRs1yTxYw
+id: dxpr_naranja_content
+theme: dxpr_naranja
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

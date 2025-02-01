@@ -1,15 +1,15 @@
-uuid: f8d69207-4fca-47e5-8c94-285ffcddc354
+uuid: cd9c0a1f-38df-4292-8f2c-53895a3b7f90
 langcode: es
-status: false
+status: true
 dependencies:
   theme:
-    - naranja_b5subtheme
+    - dxpr_theme
 _core:
-  default_config_hash: RZ4_cVsTRzdrXFhSo3IYX6Cx96I8WNJ6P4aHfUTep_8
-id: naranja_b5subtheme_local_actions
-theme: naranja_b5subtheme
+  default_config_hash: 72nlwRjqiXBAwD4_Wzf9YVMhGeEnqWlHF8NS6KoI7Js
+id: dxpr_theme_local_actions
+theme: dxpr_theme
 region: content
-weight: -2
+weight: -30
 provider: null
 plugin: local_actions_block
 settings:

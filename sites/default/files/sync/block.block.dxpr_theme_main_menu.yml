@@ -1,4 +1,4 @@
-uuid: 598593d6-b297-4887-88ae-455eb2a356dd
+uuid: 55e73a7b-a081-4472-8e4a-d77fe37acbe2
 langcode: es
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - naranja_b5subtheme
+    - dxpr_theme
 _core:
-  default_config_hash: 8l7yEfrMvinX6WEvwRayyYqgEDbSu6z3nzsLRxY6jtc
-id: naranja_b5subtheme_main_navigation
-theme: naranja_b5subtheme
-region: nav_main
-weight: 0
+  default_config_hash: sOBfLFUB4t3yuAG5cmsbqVnN31761mx5SUHgrjS3Lpk
+id: dxpr_theme_main_menu
+theme: dxpr_theme
+region: navigation_collapsible
+weight: 10
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 0
-  expand_all_items: true
+  depth: 9
+  expand_all_items: false
 visibility: {  }

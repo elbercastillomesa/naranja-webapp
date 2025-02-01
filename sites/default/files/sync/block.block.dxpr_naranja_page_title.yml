@@ -1,0 +1,20 @@
+uuid: 052db894-7194-43b2-98e4-1cf2c95d28a0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dxpr_naranja
+_core:
+  default_config_hash: 5p6onlbwg8IfOoLBo-hjKA7w3Wmb37ZZxGGxZp5vVm8
+id: dxpr_naranja_page_title
+theme: dxpr_naranja
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,17 +1,17 @@
-uuid: a80d1842-50c7-472e-a986-0ffa6c1fe9cf
+uuid: bba498db-a3a5-4664-9daa-b18ca0b6fa2f
 langcode: es
 status: true
 dependencies:
   module:
     - system
   theme:
-    - naranja_b5subtheme
+    - dxpr_theme
 _core:
-  default_config_hash: QDknMgglcRY_u23brtUxdDtP6udYafmaZOwP04syi10
-id: naranja_b5subtheme_branding
-theme: naranja_b5subtheme
-region: nav_branding
-weight: -6
+  default_config_hash: lOdPdXWPbE5QLAuSRidWj90DTENmQzKLeNjvr64juyo
+id: dxpr_theme_branding
+theme: dxpr_theme
+region: navigation
+weight: 0
 provider: null
 plugin: system_branding_block
 settings:
@@ -20,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   use_site_logo: true
-  use_site_name: true
+  use_site_name: false
   use_site_slogan: false
 visibility: {  }

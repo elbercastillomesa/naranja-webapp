@@ -1,17 +1,17 @@
-uuid: 7c61800d-b5db-4bfa-b586-0cac364a6c60
+uuid: 0020b786-9b63-4e43-8777-aeeb6ddbf0dd
 langcode: es
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
-    - naranja_b5subtheme
+    - dxpr_theme
 _core:
-  default_config_hash: 0iZOmcIuUupCMC8ax4xYUN3WcrZhzO0H4MmxlNUIbIM
-id: naranja_b5subtheme_content
-theme: naranja_b5subtheme
+  default_config_hash: FR6TscQ_wWvu_Oif0Ha6seHBgJwsupKvwisRs1yTxYw
+id: dxpr_theme_content
+theme: dxpr_theme
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

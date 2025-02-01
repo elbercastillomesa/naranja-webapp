@@ -1,22 +1,22 @@
-uuid: 04a12d3b-bf77-4f48-8ce9-09440327b176
+uuid: bacf87c2-9f34-4017-87ea-11d9d9c19141
 langcode: es
 status: true
 dependencies:
   module:
     - system
   theme:
-    - naranja_b5subtheme
+    - dxpr_theme
 _core:
-  default_config_hash: IVGdOUWSHESnJLbk-nxe5SRT9d_RQILvhkdZ-F_m1Jk
-id: naranja_b5subtheme_messages
-theme: naranja_b5subtheme
+  default_config_hash: T7gZEkBqqElnOklin4m1rfJYv28ry5eY-FjEDOrHGTU
+id: dxpr_theme_messages
+theme: dxpr_theme
 region: content
-weight: -7
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
-  label: Mensajes
+  label: 'Mensajes de estado'
   label_display: '0'
   provider: system
 visibility: {  }

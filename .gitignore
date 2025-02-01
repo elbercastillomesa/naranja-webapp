@@ -28,6 +28,9 @@ sites/*/services*.yml
 sites/*/files/*
 sites/*/private
 
+# Ignore OS hidden files
+.DS_Store
+
 # Do not ignore sync configurations folder.
 
 !sites/default/files/sync

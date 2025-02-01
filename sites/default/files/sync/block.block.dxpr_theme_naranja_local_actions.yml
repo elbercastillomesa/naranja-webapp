@@ -1,0 +1,20 @@
+uuid: db0f358c-9ceb-4777-904d-17782eb9a3e9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dxpr_theme_naranja
+_core:
+  default_config_hash: 72nlwRjqiXBAwD4_Wzf9YVMhGeEnqWlHF8NS6KoI7Js
+id: dxpr_theme_naranja_local_actions
+theme: dxpr_theme_naranja
+region: content
+weight: -30
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
