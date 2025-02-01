@@ -73,7 +73,7 @@ return array(
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/src'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/src'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
-    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/src', $vendorDir . '/doctrine/event-manager/src'),
+    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/src', $vendorDir . '/doctrine/common/src'),
     'Dflydev\\DotAccessData\\' => array($vendorDir . '/dflydev/dot-access-data/src'),
     'CssLint\\' => array($vendorDir . '/neilime/php-css-lint/src/CssLint'),
     'Consolidation\\SiteProcess\\' => array($vendorDir . '/consolidation/site-process/src'),
