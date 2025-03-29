@@ -8,7 +8,7 @@ dependencies:
   - paragraphs:paragraphs
   - twig_tweak:twig_tweak
 
-# Information added by Drupal.org packaging script on 2025-01-09
-version: '1.0.9'
+# Information added by Drupal.org packaging script on 2025-02-25
+version: '1.1.0'
 project: 'ixm_blocks'
-datestamp: 1736466060
+datestamp: 1740515410
