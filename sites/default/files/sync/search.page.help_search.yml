@@ -1,5 +1,4 @@
-uuid: null
-langcode: es
+langcode: en
 status: true
 dependencies:
   module:
