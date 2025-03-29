@@ -1,8 +1,0 @@
-global-styling:
-  css:
-    theme:
-      css/style.css: {}
-yaro-op:
-  css:
-    component:
-      fonts/custom-fonts.css: {}

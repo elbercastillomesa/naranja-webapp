@@ -1,8 +1,0 @@
-global-styling:
-  css:
-    theme:
-      css/dxpr_theme_subtheme.css: { minified: false, weight: 6 }
-yaro-op:
-  css:
-    component:
-      fonts/custom-fonts.css: {}
