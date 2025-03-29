@@ -1,12 +1,7 @@
 uuid: efa6fc98-8f8c-43b1-9649-f9fd62784959
 langcode: es
 status: true
-dependencies:
-  module:
-    - block_library
-third_party_settings:
-  block_library:
-    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_cta_icons/images/ixm_blocks_cta_icons.svg
+dependencies: {  }
 _core:
   default_config_hash: OBW-wp-aiuOxYl17OVryB8GN81TpnKT-kKBU25pnito
 id: ixm_blocks_cta_icons

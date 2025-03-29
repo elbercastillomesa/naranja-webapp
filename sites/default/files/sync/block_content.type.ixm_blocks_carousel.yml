@@ -1,12 +1,7 @@
 uuid: 483f2c6a-35ac-4fe2-8fe9-69bea66737d6
 langcode: es
 status: true
-dependencies:
-  module:
-    - block_library
-third_party_settings:
-  block_library:
-    icon_path: modules/contrib/ixm_blocks/modules/ixm_blocks_carousel/images/ixm_blocks_carousel.svg
+dependencies: {  }
 _core:
   default_config_hash: 2DRbP9J5-l1mtee6DspyUxft9gcnShq2UdPvqlezJDs
 id: ixm_blocks_carousel
