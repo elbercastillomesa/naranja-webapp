@@ -16,7 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/admin_toolbar": "^3.5",
+        "drupal/admin_toolbar": "3.5.3",
         "drupal/bookable_calendar": "2.2.12",
         "drupal/calendar_view": "^2.1",
         "drupal/color": "^1.0",
@@ -26,9 +26,11 @@
         "drupal/core-recommended": "10.4.5",
         "drupal/core-vendor-hardening": "^10.1",
         "drupal/field_group": "^3.6",
-        "drupal/ixm_blocks": "^1.0",
+        "drupal/ixm_blocks": "1.1.0",
         "drupal/layout_builder_component_attributes": "^2.2",
+        "drupal/paragraphs": "1.19",
         "drupal/simple_gmap": "^4.0",
+        "drupal/smart_date": "4.2.3",
         "drush/drush": "^12.5"
     },
     "conflict": {

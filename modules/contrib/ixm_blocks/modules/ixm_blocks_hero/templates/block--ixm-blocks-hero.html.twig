@@ -27,7 +27,7 @@ Macros:
 
 {{ attach_library('ixm_blocks_hero/hero-styles') }}
 
-{% set hero_id = 'carousel-' ~ configuration['id']|clean_id %}
+{% set hero_id = ('carousel-' ~ configuration['id'])|clean_id %}
 {% set hero_items = content.field_entity_reference_paragraph|filter((value, key) => key|first != '#') %}
 
 {# Initialize default carousel classes & variables. #}
@@ -66,23 +66,25 @@ Macros:
   {{ title_suffix }}
 
   {# Render carousel based on type #}
-  {% if hero_items|length > 1 %}
-    {% if carousel_type == 'bootstrap' %}
-      {{ macros.bootstrap_carousel(hero_id, hero_items, variant, carousel_classes, carousel_attributes, navigation, pagination, carousel_item_attributes) }}
-    {% elseif carousel_type == 'swiper' %}
-      {{ macros.swiper_carousel(hero_id, hero_items, variant, carousel_classes, carousel_attributes, navigation, pagination, scrollbar) }}
-    {% endif %}
-  {% else %}
-    {# Render a single slide without a carousel #}
-    <div class="hero-banner-wrapper">
-      {% for key, item in hero_items %}
-        {% set media_items = item['#media_items'] ?? [] %}
-        {% for media in media_items %}
-          {{ macros.hero_slide(item, variant, media) }}
+  {% block hero_content %}
+    {% if hero_items|length > 1 %}
+      {% if carousel_type == 'bootstrap' %}
+        {{ macros.bootstrap_carousel(hero_id, hero_items, variant, carousel_classes, carousel_attributes, navigation, pagination, carousel_item_attributes) }}
+      {% elseif carousel_type == 'swiper' %}
+        {{ macros.swiper_carousel(hero_id, hero_items, variant, carousel_classes, carousel_attributes, navigation, pagination, scrollbar) }}
+      {% endif %}
+    {% else %}
+      {# Render a single slide without a carousel #}
+      <div class="hero-banner-wrapper">
+        {% for key, item in hero_items %}
+          {% set media_items = item['#media_items'] ?? [] %}
+          {% for media in media_items %}
+            {{ macros.hero_slide(item, variant, media) }}
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
-    </div>
-  {% endif %}
+      </div>
+    {% endif %}
+  {% endblock %}
 
 </div>
 
