@@ -1,0 +1,25 @@
+uuid: bb526820-b152-43df-9a1e-48e34625ee85
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:ubicacion_gmap:5f20ae4d-0a09-4105-acb5-ee2188908126'
+  module:
+    - block_content
+  theme:
+    - dxpr_theme_naranja
+id: dxpr_theme_naranja_naranjainternetgooglemaps
+theme: dxpr_theme_naranja
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:5f20ae4d-0a09-4105-acb5-ee2188908126'
+settings:
+  id: 'block_content:5f20ae4d-0a09-4105-acb5-ee2188908126'
+  label: 'Naranja Internet Google Maps'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

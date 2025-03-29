@@ -1,0 +1,25 @@
+uuid: 90cbbc22-78e3-48e4-836f-0cac5d2c80da
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - dxpr_theme_naranja
+id: dxpr_theme_naranja_piedepagina
+theme: dxpr_theme_naranja
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Pie de página'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
