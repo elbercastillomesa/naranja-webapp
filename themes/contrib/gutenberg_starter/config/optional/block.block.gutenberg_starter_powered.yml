@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+id: gutenberg_starter_powered
+theme: gutenberg_starter
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

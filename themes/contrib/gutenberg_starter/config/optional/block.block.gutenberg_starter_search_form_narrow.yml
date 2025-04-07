@@ -1,0 +1,20 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - gutenberg_starter
+id: gutenberg_starter_search_form_narrow
+theme: gutenberg_starter
+region: menu
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

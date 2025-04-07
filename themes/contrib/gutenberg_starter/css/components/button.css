@@ -1,0 +1,30 @@
+/**
+ * @file
+ * Visual styles for buttons.
+ */
+
+.button,
+.image-button {
+  margin-right: 1em;
+  margin-left: 1em;
+  padding: 2px 20px;
+  border-radius: 4px;
+  border: solid 1px var(--color-secondary);
+  background-color: var(--color-secondary-light);
+  color: var(--color-dark);
+  /* box-shadow: rgba(0,0,0,.2) 0px 0px 15px; */
+  cursor: pointer;
+  transition: box-shadow .1s ease-in-out;
+  font-size: var(--font-size-base);
+}
+
+.button:hover,
+.image-button:hover {
+  /* box-shadow: rgba(0,0,0,.4) 0px 0px 18px; */
+}
+
+.button:first-child,
+.image-button:first-child {
+  margin-right: 0;
+  margin-left: 0;
+}

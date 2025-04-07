@@ -1,0 +1,6 @@
+.region-breadcrumb {
+    max-width: calc(var(--container-max-width) + var(--sp));
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--sp);
+  }

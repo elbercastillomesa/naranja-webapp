@@ -1,0 +1,125 @@
+/**
+ * @file
+ * Visual styles for menu.
+ */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+nav.block-menu {
+  margin: var(--sp) var(--sp) 0;
+}
+nav.block-menu:last-child {
+  margin-top: 0;
+  margin-bottom: var(--sp);
+}
+
+ul.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none outside;
+  text-align: left; /* LTR */
+  display: flex;
+  column-gap: var(--sp);
+  flex-direction: column;
+}
+[dir="rtl"] ul.menu {
+  text-align: right;
+}
+.menu-item--expanded {
+  list-style-type: circle;
+  list-style-image: url(../../images/icons/menu-expanded.png);
+}
+.menu-item--collapsed {
+  list-style-type: disc;
+  list-style-image: url(../../images/icons/menu-collapsed.png); /* LTR */
+}
+[dir="rtl"] .menu-item--collapsed {
+  list-style-image: url(../../images/icons/menu-collapsed-rtl.png);
+}
+.menu-item {
+  margin: 0;
+  padding-top: 0.2em;
+}
+ul.menu a.is-active {
+}
+
+@media (min-width: 768px) {
+  ul.menu{
+    flex-direction: row;
+    margin: 0;
+  }
+  nav.block-menu {
+    margin: 0 !important;
+  }
+  .region-menu .navigation {
+    opacity: 1;
+  }
+}
+
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 20px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+}/* Style label tag */
+
+.hamb-line {
+  background: var(--color-dark);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+  background: var(--color-dark);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.hamb-line::before{
+  top: 7px;
+}
+.hamb-line::after{
+  top: -7px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ .region-menu {
+  max-height: 100%;
+  padding-top: var(--header-height-mobile);
+}
+.side-menu:checked ~ .region-menu .navigation {
+  opacity: 1;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+@media (min-width: 768px) {
+  .hamb{
+    display: none;
+  }
+}

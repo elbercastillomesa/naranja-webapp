@@ -1,0 +1,18 @@
+.region-content {
+  max-width: calc(var(--container-max-width) + var(--sp2));
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--sp);
+}
+
+.layout-content-narrow .region-content {
+  padding: var(--sp2);
+  background-color: var(--color-tertiary);
+  margin-bottom: var(--sp2);
+}
+
+.region.wide {
+  max-width: calc(var(--container-max-width) + var(--sp2));
+  margin-left: auto;
+  margin-right: auto;
+}

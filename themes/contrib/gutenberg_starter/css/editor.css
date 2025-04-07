@@ -1,0 +1,20 @@
+/* Fix for units dropdown */
+.edit-post-sidebar select {
+  z-index: 1;
+}
+
+.wp-block {
+  position: relative;
+  max-width: var(--container-max-width);
+}
+
+.block-warning-label {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  z-index: 2;
+  border: solid 1px #000;
+  font-size: var(--font-size-xs);
+  background-color: #ffc;
+  padding: 0 5px;
+}

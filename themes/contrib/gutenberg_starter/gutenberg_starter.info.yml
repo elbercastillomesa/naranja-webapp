@@ -1,0 +1,50 @@
+name: Gutenberg Starter
+type: theme
+description: |-
+  A good starting point for developers to create a custom theme for Drupal Gutenberg content.<br/><a href='https://www.drupal.org/docs/contributed-themes/gutenberg_starter'>Check theme's documentation.</a><br/>
+  Install/enable Gutenberg module before enabling this theme.
+  <div role="contentinfo" aria-labelledby="message-warning-title" class="messages-list__item messages messages--warning">
+    <div class="messages__header">
+      <h2 id="message-warning-title" class="messages__title">
+        Warning
+      </h2>
+    </div>
+    <div class="messages__content">
+      This theme is not intended to be used in production environments, just as a reference.
+    </div>
+  </div>
+
+'base theme': stable9
+starterkit: true
+dependencies:
+  - gutenberg:gutenberg
+logo: logo.svg
+regions:
+  header: Header
+  menu: Menu
+  tabs: Tabs
+  breadcrumb: Breadcrumb
+  content: Content
+  footer: Footer
+libraries:
+  - gutenberg_starter/base
+  - gutenberg_starter/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - gutenberg_starter/user
+  core/drupal.dropbutton:
+    - gutenberg_starter/dropbutton
+  core/drupal.dialog:
+    - gutenberg_starter/dialog
+  file/drupal.file:
+    - gutenberg_starter/file
+  core/drupal.progress:
+    - gutenberg_starter/progress
+core_version_requirement: ^10 || ^11
+generator: 'starterkit_theme:10.1.5'
+
+# Information added by Drupal.org packaging script on 2024-08-12
+version: '1.1.0'
+project: 'gutenberg_starter'
+datestamp: 1723459972

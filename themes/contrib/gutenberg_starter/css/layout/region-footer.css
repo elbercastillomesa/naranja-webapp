@@ -1,0 +1,31 @@
+.layout-container > footer {
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  padding: var(--sp2) 0;
+} 
+
+.region-footer {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  column-gap: var(--sp);
+  padding: 0 var(--sp);
+}
+
+.region-footer a {
+  color: var(--color-footer-link-text);
+}
+
+.region-footer a:hover {
+  color: var(--color-footer-link-text-hover);
+}
+
+.region-tabs {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}

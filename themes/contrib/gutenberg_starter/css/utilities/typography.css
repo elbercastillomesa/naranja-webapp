@@ -1,0 +1,7 @@
+.font-size-small {
+  font-size: var(--font-size-s);
+}
+
+.font-size-large {
+  font-size: var(--font-size-l);
+}

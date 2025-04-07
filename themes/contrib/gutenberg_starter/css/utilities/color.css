@@ -1,0 +1,11 @@
+.text-color-primary {
+  color: var(--color-primary);
+}
+
+.text-color-light {
+  color: var(--color-light);
+}
+
+.text-color-dark {
+  color: var(--color-dark);
+}

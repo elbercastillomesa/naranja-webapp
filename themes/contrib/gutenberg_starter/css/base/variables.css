@@ -1,0 +1,61 @@
+:root {
+  --font-sans: "Poppins", sans-serif;
+  --font-serif: "georgia", serif;
+
+  /* Typography helpers. */
+  --font-size-base: 18px;
+  --font-size-xl: 32px;
+  --font-size-l: 24px;
+  --font-size-s: 16px;
+  --font-size-xs: 12px;
+  --font-size-xxs: 10px;
+  --line-height-base: 1.6875rem;
+  --line-height-xl: 48px;
+  --line-height-l: 32px;
+  --line-height-s: 18px;
+
+  /* Spacing helpers. */
+  --sp: 18px;
+  --sp0-5: calc(var(--sp) / 2);
+  --sp1-5: calc(var(--sp) * 1.5);
+  --sp2: calc(var(--sp) * 2);
+  --sp3: calc(var(--sp) * 3);
+  --sp4: calc(var(--sp) * 4);
+
+  /* Layout helpers. */
+  --container-max-width: 670px;
+  --container-padding: var(--sp);
+  --header-height: 105px;
+  --header-height-mobile: 85px;
+  
+  /* Colors. */
+  --color-primary: rgba(53, 86, 209, 1);
+  --color-primary-light: rgba(219, 225, 248, 1);
+  --color-primary-dark: #0059a2;
+  --color-secondary: rgba(205, 186, 255, 1);
+  --color-secondary-light: rgba(247, 244, 255, 1);
+  --color-secondary-dark: rgba(198, 185, 231, 1);
+  --color-tertiary: rgba(53, 86, 209, .13);
+  --color-tertiary-light: #dcf0e2;
+  --color-tertiary-dark: #008088;
+
+  --color-dark: #000;
+  --color-light: #fff;
+
+  --color-gray: #e5e5e5;
+  --color-gray-light: #ccc;
+  --color-gray-dark: #999;
+
+  --color-text: var(--color-dark);
+  --color-link-text: var(--color-primary);
+
+  --color-header-text: var(--color-dark);
+  --color-header-link-text: var(--color-dark);
+  --color-header-link-text-hover: var(--color-dark);
+  --color-header-background: var(--color-primary);
+
+  --color-footer-text: var(--color-dark);
+  --color-footer-link-text: var(--color-primary);
+  --color-footer-link-text-hover: var(--color-secondary-light);
+  --color-footer-background: var(--color-primary-light);
+}

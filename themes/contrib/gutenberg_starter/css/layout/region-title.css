@@ -1,0 +1,6 @@
+.region-title {
+    max-width: calc(var(--container-max-width) + var(--sp2));
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--sp);
+  }

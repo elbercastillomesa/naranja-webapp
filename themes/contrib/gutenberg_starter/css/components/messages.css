@@ -1,0 +1,98 @@
+/**
+ * @file
+ * Styles for system messages.
+ */
+
+[data-drupal-messages] {
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  width: 90vw;
+  margin-left: -5vw;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  [data-drupal-messages] {
+    width: 50vw;
+    left: 50%;
+    margin-left: -25vw;
+  }
+}
+
+[data-drupal-messages].show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 9.5s;
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.messages {
+  padding: 15px 20px 15px 50px; /* LTR */
+  word-wrap: break-word;
+  border: solid 1px var(--color-primary-dark);
+  border-radius: 4px;
+  background: no-repeat 25px 20px;  /* LTR */
+  overflow-wrap: break-word;
+}
+@media (min-width: 768px) {
+  border-radius: 50px;
+}
+[dir="rtl"] .messages {
+  padding-right: 35px;
+  padding-left: 20px;
+  text-align: right;
+  background-position: right 10px top 17px;
+}
+.messages + .messages {
+  margin-top: 1.538em;
+}
+.messages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.messages__item + .messages__item {
+  margin-top: 0.769em;
+}
+.messages--status {
+  color: var(--colot-text);
+  background-color: var(--color-secondary-light);
+  border-color: var(--color-secondary);
+  /* background-image: url(../../images/icons/check.svg); */
+}
+.messages--warning {
+  color: #fdf8ed;
+  background-color: #734c00;
+  background-image: url(../../images/icons/warning.svg);
+}
+.messages--error {
+  color: #fcf4f2;
+  background-color: #a51b00;
+  background-image: url(../../images/icons/error.svg);
+}
+.messages--error p.error {
+  color: #fcf4f2;
+}
+.messages a {
+  color: var(--color-primary);
+}
+
+.messages .close {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--color-dark);
+  cursor: pointer;
+  font-weight: 100;
+}

@@ -2127,6 +2127,151 @@
             "install-path": "../../modules/contrib/field_group"
         },
         {
+            "name": "drupal/gutenberg",
+            "version": "3.0.6",
+            "version_normalized": "3.0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gutenberg.git",
+                "reference": "3.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gutenberg-3.0.6.zip",
+                "reference": "3.0.6",
+                "shasum": "1810358286a21c19269b34f1aec92a806b6f89ff"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpspec/prophecy-phpunit": "^2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.6",
+                    "datestamp": "1737591143",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Fernandes (marcofernandes)",
+                    "homepage": "https://www.drupal.org/u/marcofernandes"
+                },
+                {
+                    "name": "Thor Andre Gretland (thorandre)",
+                    "homepage": "https://www.drupal.org/u/thorandre"
+                },
+                {
+                    "name": "Roberto Ornelas (roborn)",
+                    "homepage": "https://www.drupal.org/u/roborn"
+                },
+                {
+                    "name": "codebymikey",
+                    "homepage": "https://www.drupal.org/u/codebymikey"
+                },
+                {
+                    "name": "Stephan Zeidler (szeidler)",
+                    "homepage": "https://www.drupal.org/u/szeidler"
+                },
+                {
+                    "name": "marcofernandes",
+                    "homepage": "https://www.drupal.org/user/2127558"
+                },
+                {
+                    "name": "perandre",
+                    "homepage": "https://www.drupal.org/user/221337"
+                },
+                {
+                    "name": "roborn",
+                    "homepage": "https://www.drupal.org/user/139474"
+                },
+                {
+                    "name": "szeidler",
+                    "homepage": "https://www.drupal.org/user/767652"
+                },
+                {
+                    "name": "thorandre",
+                    "homepage": "https://www.drupal.org/user/223878"
+                },
+                {
+                    "name": "truls1502",
+                    "homepage": "https://www.drupal.org/user/325866"
+                }
+            ],
+            "description": "Drupal Gutenberg brings the powerful admin features of Gutenberg Editor to Drupal.",
+            "homepage": "https://www.drupal.org/project/gutenberg",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gutenberg",
+                "issues": "https://www.drupal.org/project/issues/gutenberg"
+            },
+            "install-path": "../../modules/contrib/gutenberg"
+        },
+        {
+            "name": "drupal/gutenberg_starter",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/gutenberg_starter.git",
+                "reference": "1.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gutenberg_starter-1.1.0.zip",
+                "reference": "1.1.0",
+                "shasum": "e1bb12c6272d7be2f9f1f592097caded2a1541f1"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/gutenberg": "*"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "1.1.0",
+                    "datestamp": "1723459969",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "marcofernandes",
+                    "homepage": "https://www.drupal.org/user/2127558"
+                },
+                {
+                    "name": "thorandre",
+                    "homepage": "https://www.drupal.org/user/223878"
+                }
+            ],
+            "description": "A good starting point for developers to create a custom theme for Drupal Gutenberg content.<br/><a href='https://www.drupal.org/docs/contributed-themes/gutenberg_starter'>Check theme's documentation.</a><br/>\nInstall/enable Gutenberg module before enabling this theme.\n<div role=\"contentinfo\" aria-labelledby=\"message-warning-title\" class=\"messages-list__item messages messages--warning\">\n  <div class=\"messages__header\">\n    <h2 id=\"message-warning-title\" class=\"messages__title\">\n      Warning\n    </h2>\n  </div>\n  <div class=\"messages__content\">\n    This theme is not intended to be used in production environments, just as a reference.\n  </div>\n</div>",
+            "homepage": "https://www.drupal.org/project/gutenberg_starter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/gutenberg_starter"
+            },
+            "install-path": "../../themes/contrib/gutenberg_starter"
+        },
+        {
             "name": "drupal/ixm_blocks",
             "version": "1.1.0",
             "version_normalized": "1.1.0.0",

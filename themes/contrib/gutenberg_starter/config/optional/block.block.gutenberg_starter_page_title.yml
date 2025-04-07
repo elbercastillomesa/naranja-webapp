@@ -1,0 +1,23 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gutenberg_starter
+id: gutenberg_starter_page_title
+theme: gutenberg_starter
+region: header
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: ''
