@@ -18,6 +18,7 @@
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "3.5.3",
         "drupal/bookable_calendar": "2.2.12",
+        "drupal/bootstrap5": "^4.0",
         "drupal/calendar_view": "^2.1",
         "drupal/color": "^1.0",
         "drupal/content_as_config": "^1.0",
