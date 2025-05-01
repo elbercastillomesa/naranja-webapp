@@ -1,9 +1,9 @@
-# Add client libraries to be attached to the node edit page where the editor is. 
+# Add client libraries to be attached to the node edit page where the editor is.
 # Useful for tweaking the admin UI.
 libraries-edit:
   - naranja_b5subtheme/global-styling
 
-# Add client libraries to be attached to the node page. 
+# Add client libraries to be attached to the node page.
 # Useful for custom blocks using javascript behaviors.
 # libraries-view:
 #   - gutenberg_starter/blocks
@@ -24,6 +24,7 @@ theme-support:
   allowedMimeTypes:
     jpg|jpeg|jpe: image/jpeg
     png: image/png
+    svg: image/svg+xml
     gif: image/gif
     mp3|m4a|m4b: audio/mpeg
     mov|qt: video/quicktime
@@ -54,7 +55,7 @@ theme-support:
     - "vw"
 
   disableCustomColors: false
-  disableCustomFontSizes: true
+  disableCustomFontSizes: false
   disableCustomGradients: false
   disableCustomSpacingSizes: false
   # CSS vars not supported yet.
@@ -184,14 +185,15 @@ theme-support:
     # layout must be defined when using align wide setting on version 3.0 or above.
     layout:
       contentSize: 670px
-      wideSize: 954px
+      wideSize: 1200px
+      ultraWideSize: 1440px
     color:
       custom: true
       background: true
       button: true
-      caption: true
-      defaultDuotone: false
-      defaultGradients: false
+      caption: false
+      defaultDuotone: true
+      defaultGradients: true
       text: true
       defaultPalette: false
       heading: true
@@ -302,85 +304,246 @@ theme-support:
           width: false
 
   __experimentalBlockPatternCategories:
-    - label: Sections
+    -
+      label: Text
+      name: text
+    -
+      label: Hero
+      name: hero
+    -
+      label: Cards
+      name: cards
+    -
+      label: CTA
+      name: cta
+    -
+      label: Sections
       name: sections
   __experimentalBlockPatterns:
-    - categories:
+    - description: 'Prog Hero Banner Section.'
+      name: progleasingsite/hero
+      title: 'Prog Hero Banner'
+      categories:
+        - hero
+      content: |-
+        <!-- wp:group {"tagName":"section","className":"gutenberg-hero-banner","layout":{"type":"constrained"},"metadata":{"name":"Hero Banner"}} -->
+          <section class="wp-block-group gutenberg-hero-banner"><!-- wp:cover {"url":"https://progleasing.com/sites/progleasingsite/files/2024-09/home-know-what-you-need-header_0.jpg","id":3167,"dimRatio":0,"isDark":false,"align":"full","style":{"spacing":{"padding":{"right":"100px","left":"100px"}}},"layout":{"type":"default"},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"9c1385ac-898d-4684-987b-a4ed943f3ef1","data-image-style":"original"}} -->
+          <div class="wp-block-cover alignfull is-light" style="padding-right:100px;padding-left:100px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><img class="wp-block-cover__image-background wp-image-3167" alt="" src="https://progleasing.com/sites/progleasingsite/files/2024-09/home-know-what-you-need-header_0.jpg" data-object-fit="cover" data-entity-type="file" data-entity-uuid="9c1385ac-898d-4684-987b-a4ed943f3ef1" data-image-style="original"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
+          <div class="wp-block-columns"><!-- wp:column {"width":"500px","style":{"spacing":{"padding":{"left":"40px","right":"40px","top":"60px","bottom":"60px"}},"color":{"background":"#f5f5f5e6"}}} -->
+          <div class="wp-block-column has-background" style="background-color:#f5f5f5e6;padding-top:60px;padding-right:40px;padding-bottom:60px;padding-left:40px;flex-basis:500px"><!-- wp:heading {"level":1,"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}}}} -->
+          <h1 class="wp-block-heading has-dark-grey-color has-text-color has-link-color">You know what you need</h1>
+          <!-- /wp:heading -->
+
+          <!-- wp:paragraph {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"700"}}} -->
+          <p class="has-dark-grey-color has-text-color has-link-color" style="font-size:24px;font-style:normal;font-weight:700">We'll help you get it.</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"18px"}}} -->
+          <p class="has-dark-grey-color has-text-color has-link-color" style="font-size:18px">Shop at your favorite stores and enjoy convenient lease-to-own purchase options.</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"18px"}}} -->
+          <p class="has-dark-grey-color has-text-color has-link-color" style="font-size:18px">No credit needed.*</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:buttons {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"center"}} -->
+          <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"product-blue","textColor":"white","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"700","lineHeight":"1"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"padding":{"left":"2em","right":"2em","top":"0.75em","bottom":"0.75em"}},"border":{"radius":"3em"}}} -->
+          <div class="wp-block-button has-custom-font-size" style="font-size:16px;font-style:normal;font-weight:700;line-height:1"><a class="wp-block-button__link has-white-color has-product-blue-background-color has-text-color has-background has-link-color wp-element-button" href="https://progleasing.com/" style="border-radius:3em;padding-top:0.75em;padding-right:2em;padding-bottom:0.75em;padding-left:2em">Apply Now</a></div>
+          <!-- /wp:button --></div>
+          <!-- /wp:buttons --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column -->
+          <div class="wp-block-column"></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns --></div></div>
+          <!-- /wp:cover --></section>
+        <!-- /wp:group -->
+    - description: 'Prog Content Cards Section.'
+      name: progleasingsite/cards
+      title: 'Prog Content Cards'
+      categories:
+        - cards
+      content: |-
+        <!-- wp:group {"align":"full","className":"gutenberg-content-cards","layout":{"type":"constrained"},"metadata":{"name":"Content Cards"}} -->
+          <div class="wp-block-group alignfull gutenberg-content-cards"><!-- wp:columns {"align":"full"} -->
+          <div class="wp-block-columns alignfull"><!-- wp:column {"width":"","style":{"spacing":{"padding":{"top":"1em","bottom":"1em","left":"1em","right":"1em"}}}} -->
+          <div class="wp-block-column" style="padding-top:1em;padding-right:1em;padding-bottom:1em;padding-left:1em"><!-- wp:heading {"textAlign":"center","textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontStyle":"normal","fontWeight":"800","lineHeight":"1"},"spacing":{"margin":{"bottom":"1em"}}}} -->
+          <h2 class="wp-block-heading has-text-align-center has-dark-grey-color has-text-color has-link-color" style="margin-bottom:1em;font-style:normal;font-weight:800;line-height:1">No credit needed*</h2>
+          <!-- /wp:heading -->
+
+          <!-- wp:list {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"18px","fontStyle":"normal","fontWeight":"500","lineHeight":"1"}}} -->
+          <ul style="font-size:18px;font-style:normal;font-weight:500;line-height:1" class="has-dark-grey-color has-text-color has-link-color"><!-- wp:list-item -->
+          <li>You can apply for the lease to own program even if you have imperfect credit<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Approval is based on many factors, including income and banking history<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>*Progressive Leasing obtains information from credit reporting agencies. Not all applicants are approved</li>
+          <!-- /wp:list-item --></ul>
+          <!-- /wp:list --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"width":"","style":{"spacing":{"padding":{"top":"1em","bottom":"1em","left":"1em","right":"1em"}}}} -->
+          <div class="wp-block-column" style="padding-top:1em;padding-right:1em;padding-bottom:1em;padding-left:1em"><!-- wp:heading {"textAlign":"center","textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontStyle":"normal","fontWeight":"800","lineHeight":"1"},"spacing":{"margin":{"bottom":"1em"}}}} -->
+          <h2 class="wp-block-heading has-text-align-center has-dark-grey-color has-text-color has-link-color" style="margin-bottom:1em;font-style:normal;font-weight:800;line-height:1">Instant decision</h2>
+          <!-- /wp:heading -->
+
+          <!-- wp:list {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"18px","fontStyle":"normal","fontWeight":"500","lineHeight":"1"}}} -->
+          <ul style="font-size:18px;font-style:normal;font-weight:500;line-height:1" class="has-dark-grey-color has-text-color has-link-color"><!-- wp:list-item -->
+          <li>The application process takes just a few minutes and can be completed online or in a participating store. You will receive an instant decision upon completing the application<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>You’ll need your routing number and account info for an active checking account<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>You must be 18 years or older with a valid social security number or ITIN and have a credit or debit card</li>
+          <!-- /wp:list-item --></ul>
+          <!-- /wp:list --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"width":"","style":{"spacing":{"padding":{"top":"1em","bottom":"1em","left":"1em","right":"1em"}}}} -->
+          <div class="wp-block-column" style="padding-top:1em;padding-right:1em;padding-bottom:1em;padding-left:1em"><!-- wp:heading {"textAlign":"center","textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontStyle":"normal","fontWeight":"800","lineHeight":"1"},"spacing":{"margin":{"bottom":"1em"}}}} -->
+          <h2 class="wp-block-heading has-text-align-center has-dark-grey-color has-text-color has-link-color" style="margin-bottom:1em;font-style:normal;font-weight:800;line-height:1">Convenient payment options</h2>
+          <!-- /wp:heading -->
+
+          <!-- wp:list {"textColor":"dark-grey","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark-grey"}}},"typography":{"fontSize":"18px","fontStyle":"normal","fontWeight":"500","lineHeight":"1"}}} -->
+          <ul style="font-size:18px;font-style:normal;font-weight:500;line-height:1" class="has-dark-grey-color has-text-color has-link-color"><!-- wp:list-item -->
+          <li>12 month standard agreement: Lowest recurring payment option. Acquiring ownership by leasing costs more than Ashley HomeStore’s cash price<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>90 day purchase option: Lowest cost of ownership<br><br></li>
+          <!-- /wp:list-item -->
+
+          <!-- wp:list-item -->
+          <li>Early buyout: Pay off your lease early to receive a discount on remaining lease amount. If you’re interested, call Progressive Leasing at 1-877-898-1970 for more details.</li>
+          <!-- /wp:list-item --></ul>
+          <!-- /wp:list --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns --></div>
+        <!-- /wp:group -->
+    - description: 'Half & half'
+      name: progleasingsite/half-half
+      title: 'Half & half'
+      categories:
         - sections
       content: |-
-        <!-- wp:cover {"url":"https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80\u0026w=1587\u0026auto=format\u0026fit=crop\u0026ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","id":6,"dimRatio":40,"focalPoint":{"x":0.52,"y":0.84},"minHeight":740,"minHeightUnit":"px","gradient":"primary-to-secondary","isDark":false,"align":"full","textColor":"dark","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark"}}}},"layout":{"type":"constrained"},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"72ac2d15-27fa-4300-a2b3-157d0b927e7f","data-image-style":"original"}} -->
-        <div class="wp-block-cover alignfull is-light has-dark-color has-text-color has-link-color" style="min-height:740px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-40 has-background-dim wp-block-cover__gradient-background has-background-gradient has-primary-to-secondary-gradient-background"></span><img class="wp-block-cover__image-background wp-image-6" alt="" src="https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80&amp;w=1587&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="object-position:52% 84%" data-object-fit="cover" data-object-position="52% 84%" data-entity-type="file" data-entity-uuid="72ac2d15-27fa-4300-a2b3-157d0b927e7f" data-image-style="original"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
-        <div class="wp-block-columns"><!-- wp:column -->
-        <div class="wp-block-column"><!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"0.9"}}} -->
-        <h1 class="wp-block-heading" style="line-height:0.9">The future of content creation</h1>
-        <!-- /wp:heading -->
+        <!-- wp:group {"align":"wide","className":"half-half-container","style":{"color":{"background":"#f0f8f6"}},"layout":{"type":"constrained"},"metadata":{"name":"Half and Half"}} -->
+          <div class="wp-block-group alignwide half-half-container has-background" style="background-color:#f0f8f6"><!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}}}} -->
+          <div class="wp-block-columns alignwide" style="padding-top:0;padding-right:var(--wp--preset--spacing--20);padding-bottom:0;padding-left:var(--wp--preset--spacing--20)"><!-- wp:column {"verticalAlignment":"center","width":"66.66%"} -->
+          <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:heading {"textAlign":"left"} -->
+          <h2 class="wp-block-heading has-text-align-left">No credit needed*</h2>
+          <!-- /wp:heading -->
 
-        <!-- wp:paragraph -->
-        <p>Drupal Gutenberg is the easiest-to-use content editor for your Drupal installation. Creating beautiful landing pages has never been so easy.</p>
-        <!-- /wp:paragraph --></div>
-        <!-- /wp:column -->
+          <!-- wp:paragraph -->
+          <p>We know a three-digit number doesn’t tell your story. That’s why every Progressive Leasing approval is NO CREDIT NEEDED.</p>
+          <!-- /wp:paragraph -->
 
-        <!-- wp:column -->
-        <div class="wp-block-column"></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns --></div></div>
-        <!-- /wp:cover -->
-      description: 'Hero section.'
-      name: gutenberg-starter/hero
-      title: 'Hero'
+          <!-- wp:paragraph -->
+          <p>Our underwriting process allows us to consider everyone with less-than-perfect credit. We look at many other data points including income and banking history and regularly approve people with less than perfect credit or very little credit history.</p>
+          <!-- /wp:paragraph -->
 
-    - categories:
+          <!-- wp:paragraph -->
+          <p><em><strong>*Progressive Leasing obtains information from credit bureaus. Not all applicants are approved.</strong></em></p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:buttons -->
+          <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"product-blue","textColor":"white","style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"700","lineHeight":"1"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"padding":{"left":"2em","right":"2em","top":"0.75em","bottom":"0.75em"}},"border":{"radius":"3em"}}} -->
+          <div class="wp-block-button has-custom-font-size" style="font-size:16px;font-style:normal;font-weight:700;line-height:1"><a class="wp-block-button__link has-white-color has-product-blue-background-color has-text-color has-background has-link-color wp-element-button" href="https://progleasing.com/" style="border-radius:3em;padding-top:0.75em;padding-right:2em;padding-bottom:0.75em;padding-left:2em">Apply Now</a></div>
+          <!-- /wp:button --></div>
+          <!-- /wp:buttons --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"width":"33.33%","style":{"spacing":{"padding":{"right":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
+          <div class="wp-block-column" style="padding-right:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20);flex-basis:33.33%"><!-- wp:image {"align":"full","sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image alignfull size-large"><img src="https://progleasing.com/sites/progleasingsite/files/no-credit.png" alt=""/></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns --></div>
+        <!-- /wp:group -->
+    - description: 'Media Cards'
+      name: progleasingsite/media-card
+      title: 'Media Cards'
+      categories:
+        - cards
+      content: |-
+        <!-- wp:group {"align":"full","className":"gutenberg-media-cards","style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"layout":{"type":"constrained","justifyContent":"center","wideSize":"100%"},"metadata":{"name":"Media Cards"}} -->
+          <div class="wp-block-group alignfull gutenberg-media-cards" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center","level":1} -->
+          <h1 class="wp-block-heading has-text-align-center">How it works</h1>
+          <!-- /wp:heading -->
+
+          <!-- wp:heading {"textAlign":"center","level":3} -->
+          <h3 class="wp-block-heading has-text-align-center">As easy as 1-2-3</h3>
+          <!-- /wp:heading -->
+
+          <!-- wp:paragraph {"align":"center"} -->
+          <p class="has-text-align-center">No credit needed*</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:columns {"align":"full"} -->
+          <div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"center","width":"33%","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:33%"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image aligncenter size-large"><img src="https://progleasing.com/sites/progleasingsite/files/couch-laptop.png" alt="couch laptop"/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|10","left":"var:preset|spacing|10"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+          <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--10)"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"600"}}} -->
+          <h3 class="wp-block-heading" style="font-size:24px;font-style:normal;font-weight:600">Apply for your lease</h3>
+          <!-- /wp:heading -->
+
+          <!-- wp:paragraph -->
+          <p>Once approved, go shopping at your favorite stores.</p>
+          <!-- /wp:paragraph --></div>
+          <!-- /wp:group --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"verticalAlignment":"center","width":"33%","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:33%"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image aligncenter size-large"><img src="https://progleasing.com/sites/progleasingsite/files/move-couch.png" alt=""/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|10","left":"var:preset|spacing|10"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+          <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--10)"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"600"}}} -->
+          <h3 class="wp-block-heading" style="font-size:24px;font-style:normal;font-weight:600">Take your items home</h3>
+          <!-- /wp:heading -->
+
+          <!-- wp:paragraph -->
+          <p>Take your merchandise home same day or arrange for delivery.</p>
+          <!-- /wp:paragraph --></div>
+          <!-- /wp:group --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"verticalAlignment":"center","width":"33%","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:33%"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image aligncenter size-large"><img src="https://progleasing.com/sites/progleasingsite/files/couch-tablet-2.png" alt=""/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|10","left":"var:preset|spacing|10"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+          <div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--10)"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"24px","fontStyle":"normal","fontWeight":"600"}}} -->
+          <h3 class="wp-block-heading" style="font-size:24px;font-style:normal;font-weight:600">Simple, automatic payments</h3>
+          <!-- /wp:heading -->
+
+          <!-- wp:paragraph -->
+          <p>Schedule your payments around your paydays.</p>
+          <!-- /wp:paragraph --></div>
+          <!-- /wp:group --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns --></div>
+        <!-- /wp:group -->
+    - description: 'Free Text'
+      name: progleasingsite/free-text
+      title: 'Free Text'
+      categories:
         - sections
       content: |-
-        <!-- wp:columns {"templateLock":"all","lock":{"move":true,"remove":true},"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|20"}}}} -->
-        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Fusce</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Ligula arcu tristique sapien</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Proin</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Suspendisse</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->  
-      description: 'Three columns with title, text and link. Locked.'
-      name: gutenberg-starter/three-columns
-      title: 'Three Columns'
+        <!-- wp:group {"tagName":"section","align":"full","className":"gutenberg-free-text","style":{"color":{"background":"#f3f6f6"},"spacing":{"padding":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30","top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"default"}} -->
+          <section class="wp-block-group alignfull gutenberg-free-text has-background" style="background-color:#f3f6f6;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--30)"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"elements":{"link":{"color":{"text":"var:preset|color|product-blue"}}}}} -->
+          <p class="has-text-align-center has-link-color" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--30)">Standard agreement offers 12 months to ownership. 90-day purchase options cost more than the retailer’s cash price (except 3-month option in CA). To purchase early call <a href="tel:+18778981970" data-type="tel" data-id="tel:+18778981970">877-898-1970</a>.</p>
+          <!-- /wp:paragraph --></section>
+        <!-- /wp:group -->
