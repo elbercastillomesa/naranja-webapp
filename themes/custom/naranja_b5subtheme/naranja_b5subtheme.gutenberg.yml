@@ -1,9 +1,9 @@
-# Add client libraries to be attached to the node edit page where the editor is. 
+# Add client libraries to be attached to the node edit page where the editor is.
 # Useful for tweaking the admin UI.
 libraries-edit:
   - naranja_b5subtheme/global-styling
 
-# Add client libraries to be attached to the node page. 
+# Add client libraries to be attached to the node page.
 # Useful for custom blocks using javascript behaviors.
 # libraries-view:
 #   - gutenberg_starter/blocks
@@ -24,6 +24,7 @@ theme-support:
   allowedMimeTypes:
     jpg|jpeg|jpe: image/jpeg
     png: image/png
+    svg: image/svg+xml
     gif: image/gif
     mp3|m4a|m4b: audio/mpeg
     mov|qt: video/quicktime
@@ -54,7 +55,7 @@ theme-support:
     - "vw"
 
   disableCustomColors: false
-  disableCustomFontSizes: true
+  disableCustomFontSizes: false
   disableCustomGradients: false
   disableCustomSpacingSizes: false
   # CSS vars not supported yet.
@@ -114,7 +115,7 @@ theme-support:
     - css:
         css/style.css: {}
     - css: |-
-        /* "Inline" CSS is also supported. */
+        /* "Inline" CSS is also supported.*/
         .color-red {
           color: red;
         }
@@ -184,43 +185,44 @@ theme-support:
     # layout must be defined when using align wide setting on version 3.0 or above.
     layout:
       contentSize: 670px
-      wideSize: 954px
+      wideSize: 1200px
+      ultraWideSize: 1440px
     color:
       custom: true
       background: true
       button: true
-      caption: true
-      defaultDuotone: false
-      defaultGradients: false
+      caption: false
+      defaultDuotone: true
+      defaultGradients: true
       text: true
       defaultPalette: false
       heading: true
       link: true
       palette:
         theme:
-        - name: Primary
-          slug: primary
-          color: "#CEBAFF"
-        - name: Primary Light
-          slug: primary-light
-          color: "#F7F4FF"
-        - name: Primary Dark
-          slug: primary-dark
-          color: "#584980"
-        - name: Secondary
-          slug: secondary
-          color: "#FFC884"
-        - name: Tertiary
-          slug: tertiary
-          color: "#FFC7C6"
-        - name: Contrast
-          slug: contrast
-          color: "#3556D1"
-        - name: Dark
-          slug: dark
+        - name: Apple Green
+          slug: apple-green
+          color: "#8bbe40"
+        - name: Pea Green
+          slug: pea-green
+          color: "#80ad2f"
+        - name: Carrot Orange
+          slug: carrot-orange
+          color: "#eb8d1e"
+        - name: Mango Tango
+          slug: mango-tango
+          color: "#ec7921"
+        - name: Flame Red
+          slug: flame-red
+          color: "#e95e22"
+        - name: Flame
+          slug: flame
+          color: "#e64922"
+        - name: Black
+          slug: black
           color: "#000000"
-        - name: Light
-          slug: light
+        - name: White
+          slug: white
           color: "#ffffff"
 
       customDuotone: true
@@ -248,6 +250,15 @@ theme-support:
           - name: Secondary to light
             gradient: 'linear-gradient(to right bottom, #FFC884, #FFFFFF)'
             slug: secondary-to-light
+          - name: Apple to Pea Green
+            gradient: 'linear-gradient(135deg, #8bbe40 0%, #80ad2f 100%)'
+            slug: apple-to-pea-green
+          - name: Carrot Orange to Mango Tango
+            gradient: 'linear-gradient(135deg, #eb8d1e 0%, #ec7921 100%)'
+            slug: carrot-orange-to-mango-tango
+          - name: Flame Red to Flame
+            gradient: 'linear-gradient(135deg, #e95e22 0%, #e64922 100%)'
+            slug: flame-red-to-flame
 
     typography:
       lineHeight: true
@@ -282,105 +293,119 @@ theme-support:
         color:
           palette:
             theme:
-              - slug: primary
-                color: "#CEBAFF"
-                name: Primary
-              - slug: primary-dark
-                color: "#584980"
-                name: Primary Dark
-              - slug: dark
+              - name: Apple Green
+                slug: apple-green
+                color: "#8bbe40"
+              - name: Pea Green
+                slug: pea-green
+                color: "#80ad2f"
+              - name: Carrot Orange
+                slug: carrot-orange
+                color: "#eb8d1e"
+              - name: Mango Tango
+                slug: mango-tango
+                color: "#ec7921"
+              - name: Flame Red
+                slug: flame-red
+                color: "#e95e22"
+              - name: Flame
+                slug: flame
+                color: "#e64922"
+              - name: Black
+                slug: black
                 color: "#000000"
-                name: Dark
-              - slug: light
+              - name: White
+                slug: white
                 color: "#ffffff"
-                name: Light
       core/button:
         border:
-          radius: false
-          color: false
-          style: false
-          width: false
+          radius: true
+          color: true
+          style: true
+          width: true
 
   __experimentalBlockPatternCategories:
-    - label: Sections
+    -
+      label: Text
+      name: text
+    -
+      label: Hero
+      name: hero
+    -
+      label: Cards
+      name: cards
+    -
+      label: CTA
+      name: cta
+    -
+      label: Sections
       name: sections
   __experimentalBlockPatterns:
-    - categories:
-        - sections
+    - description: 'Social Media Cards'
+      name: naranja/social-media-cards
+      title: 'Social Media Cards'
+      categories:
+        - cards
       content: |-
-        <!-- wp:cover {"url":"https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80\u0026w=1587\u0026auto=format\u0026fit=crop\u0026ixlib=rb-4.0.3\u0026ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D","id":6,"dimRatio":40,"focalPoint":{"x":0.52,"y":0.84},"minHeight":740,"minHeightUnit":"px","gradient":"primary-to-secondary","isDark":false,"align":"full","textColor":"dark","style":{"elements":{"link":{"color":{"text":"var:preset|color|dark"}}}},"layout":{"type":"constrained"},"mediaAttrs":{"data-entity-type":"file","data-entity-uuid":"72ac2d15-27fa-4300-a2b3-157d0b927e7f","data-image-style":"original"}} -->
-        <div class="wp-block-cover alignfull is-light has-dark-color has-text-color has-link-color" style="min-height:740px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-40 has-background-dim wp-block-cover__gradient-background has-background-gradient has-primary-to-secondary-gradient-background"></span><img class="wp-block-cover__image-background wp-image-6" alt="" src="https://images.unsplash.com/photo-1496865534669-25ec2a3a0fd3?q=80&amp;w=1587&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="object-position:52% 84%" data-object-fit="cover" data-object-position="52% 84%" data-entity-type="file" data-entity-uuid="72ac2d15-27fa-4300-a2b3-157d0b927e7f" data-image-style="original"/><div class="wp-block-cover__inner-container"><!-- wp:columns -->
-        <div class="wp-block-columns"><!-- wp:column -->
-        <div class="wp-block-column"><!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"0.9"}}} -->
-        <h1 class="wp-block-heading" style="line-height:0.9">The future of content creation</h1>
-        <!-- /wp:heading -->
+        <!-- wp:group {"tagName":"section","align":"full","className":"social-media-cards","style":{"spacing":{"padding":{"right":"3em","left":"3em","top":"1em","bottom":"1em"}}},"layout":{"type":"constrained","justifyContent":"center","wideSize":"100%"},"metadata":{"name":"Social Media Cards"}} -->
+          <section class="wp-block-group alignfull social-media-cards" style="padding-top:1em;padding-right:3em;padding-bottom:1em;padding-left:3em"><!-- wp:heading {"textAlign":"center","textColor":"black","style":{"typography":{"fontSize":"2.5em"},"elements":{"link":{"color":{"text":"var:preset|color|black"}}}}} -->
+          <h2 class="wp-block-heading has-text-align-center has-black-color has-text-color has-link-color" style="font-size:2.5em"><strong>Síguenos en nuestras Redes Sociales</strong> </h2>
+          <!-- /wp:heading -->
 
-        <!-- wp:paragraph -->
-        <p>Drupal Gutenberg is the easiest-to-use content editor for your Drupal installation. Creating beautiful landing pages has never been so easy.</p>
-        <!-- /wp:paragraph --></div>
-        <!-- /wp:column -->
+          <!-- wp:paragraph {"align":"center","textColor":"black","style":{"typography":{"fontSize":"1.25em"},"spacing":{"margin":{"bottom":"2em"}},"elements":{"link":{"color":{"text":"var:preset|color|black"}}}}} -->
+          <p class="has-text-align-center has-black-color has-text-color has-link-color" style="margin-bottom:2em;font-size:1.25em">Entérate de todas nuestras novedades en nuestros canales oficiales</p>
+          <!-- /wp:paragraph -->
 
-        <!-- wp:column -->
-        <div class="wp-block-column"></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns --></div></div>
-        <!-- /wp:cover -->
-      description: 'Hero section.'
-      name: gutenberg-starter/hero
-      title: 'Hero'
+          <!-- wp:columns {"align":"full","className":"d-flex justify-content-between"} -->
+          <div class="wp-block-columns alignfull d-flex justify-content-between"><!-- wp:column {"verticalAlignment":"stretch","width":"30%","className":"d-flex flex-column align-items-center mb-4 mb-md-0","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-stretch d-flex flex-column align-items-center mb-4 mb-md-0" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:30%"><!-- wp:image {"align":"center","width":"auto","height":"200px","aspectRatio":"1","scale":"cover","sizeSlug":"original","linkDestination":"none"} -->
+          <figure class="wp-block-image aligncenter size-original is-resized"><img src="https://cdn.usbrandcolors.com/images/logos/instagram-logo.png" alt="" style="aspect-ratio:1;object-fit:cover;width:auto;height:200px"/></figure>
+          <!-- /wp:image -->
 
-    - categories:
-        - sections
+          <!-- wp:buttons {"className":"d-flex","layout":{"type":"flex","justifyContent":"center"}} -->
+          <div class="wp-block-buttons d-flex"><!-- wp:button {"textColor":"white","className":"fw-bold col-12","style":{"color":{"gradient":"linear-gradient(135deg,rgb(131,58,180) 0%,rgb(64,93,230) 100%)"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontSize":"1rem"}}} -->
+          <div class="wp-block-button has-custom-font-size fw-bold col-12" style="font-size:1rem"><a class="wp-block-button__link has-white-color has-text-color has-background has-link-color wp-element-button" href="https://www.instagram.com/naranjainternet/" style="background:linear-gradient(135deg,rgb(131,58,180) 0%,rgb(64,93,230) 100%)" target="_blank" rel="noreferrer noopener">Síguenos en Instagram</a></div>
+          <!-- /wp:button --></div>
+          <!-- /wp:buttons --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"verticalAlignment":"stretch","width":"30%","className":"d-flex flex-column align-items-center mb-4 mb-md-0","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-stretch d-flex flex-column align-items-center mb-4 mb-md-0" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:30%"><!-- wp:image {"align":"center","width":"200px","aspectRatio":"1","scale":"cover","sizeSlug":"original"} -->
+          <figure class="wp-block-image aligncenter size-original is-resized"><img src="data:image/svg+xml,%3Csvg aria-label='Twitter' class='u01-dtc-react__twitter-logo-icon' focusable='false' height='24' role='img' viewBox='0 0 1200 1227' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z'%3E%3C/path%3E%3C/svg%3E" alt="" style="aspect-ratio:1;object-fit:cover;width:200px"/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:buttons {"className":"d-flex","layout":{"type":"flex","justifyContent":"center"}} -->
+          <div class="wp-block-buttons d-flex"><!-- wp:button {"textColor":"white","className":"fw-bold col-12","style":{"color":{"gradient":"linear-gradient(135deg,rgb(0,0,0) 46%,rgba(0,0,0,0.57) 100%)"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontSize":"1rem"}}} -->
+          <div class="wp-block-button has-custom-font-size fw-bold col-12" style="font-size:1rem"><a class="wp-block-button__link has-white-color has-text-color has-background has-link-color wp-element-button" href="https://x.com/naranjainternet" style="background:linear-gradient(135deg,rgb(0,0,0) 46%,rgba(0,0,0,0.57) 100%)" target="_blank" rel="noreferrer noopener">Actualizate en X</a></div>
+          <!-- /wp:button --></div>
+          <!-- /wp:buttons --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column {"verticalAlignment":"stretch","width":"30%","className":"d-flex flex-column align-items-center mb-4 mb-md-0","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->
+          <div class="wp-block-column is-vertically-aligned-stretch d-flex flex-column align-items-center mb-4 mb-md-0" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:30%"><!-- wp:image {"align":"center","width":"auto","height":"200px","aspectRatio":"1","scale":"cover","sizeSlug":"original","linkDestination":"none"} -->
+          <figure class="wp-block-image aligncenter size-original is-resized"><img src="https://cdn.usbrandcolors.com/images/logos/facebook-logo.svg" alt="" style="aspect-ratio:1;object-fit:cover;width:auto;height:200px"/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:buttons {"className":"d-flex","layout":{"type":"flex","justifyContent":"center"}} -->
+          <div class="wp-block-buttons d-flex"><!-- wp:button {"textColor":"white","className":"fw-bold col-12","style":{"color":{"gradient":"linear-gradient(135deg,rgb(66,103,178) 25%,rgb(137,143,156) 100%)"},"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"typography":{"fontSize":"1rem"}}} -->
+          <div class="wp-block-button has-custom-font-size fw-bold col-12" style="font-size:1rem"><a class="wp-block-button__link has-white-color has-text-color has-background has-link-color wp-element-button" href="https://www.facebook.com/NaranjaInternet/" style="background:linear-gradient(135deg,rgb(66,103,178) 25%,rgb(137,143,156) 100%)" target="_blank" rel="noreferrer noopener">Comunidad en Facebook</a></div>
+          <!-- /wp:button --></div>
+          <!-- /wp:buttons --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns --></section>
+        <!-- /wp:group -->
+
+    - description: 'Custom HTML Banner'
+      name: naranja/html-banner
+      title: 'Custom HTML Banner'
+      categories:
+        - hero
       content: |-
-        <!-- wp:columns {"templateLock":"all","lock":{"move":true,"remove":true},"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|20"}}}} -->
-        <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Fusce</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Ligula arcu tristique sapien</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Proin</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column -->
-
-        <!-- wp:column {"verticalAlignment":"top"} -->
-        <div class="wp-block-column is-vertically-aligned-top"><!-- wp:heading {"level":3,"placeholder":"Insert Title"} -->
-        <h3 class="wp-block-heading">Suspendisse</h3>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph -->
-        <p>Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi.</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:buttons -->
-        <div class="wp-block-buttons"><!-- wp:button {"placeholder":"Insert text","width":100,"className":"is-style-outline"} -->
-        <div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Read more</a></div>
-        <!-- /wp:button --></div>
-        <!-- /wp:buttons --></div>
-        <!-- /wp:column --></div>
-        <!-- /wp:columns -->  
-      description: 'Three columns with title, text and link. Locked.'
-      name: gutenberg-starter/three-columns
-      title: 'Three Columns'
+        <!-- wp:group {"tagName":"section","align":"full","className":"html-banner","style":{"spacing":{"padding":{"right":"0em","left":"0em","top":"0em","bottom":"0em"}}},"layout":{"type":"constrained","justifyContent":"center","wideSize":"100%"},"metadata":{"name":"HTML Banner"}} -->
+          <section class="wp-block-group alignfull html-banner" style="padding-top:0em;padding-right:0em;padding-bottom:0em;padding-left:0em"><!-- wp:html -->
+          <a href="https://www.crcom.gov.co/es/micrositios/comunicados-como-es" target="_blank">
+          <section style="background-image: url('https://www.crcom.gov.co/sites/default/files/webcrc/images/slideshow/COMUNICADOS-COMO-ES-banner%20%281%29.jpg'); background-size: contain; background-position: center; height: 300px; max-height: 9vh;" class="w-100 rounded-1 banner">
+          </section>
+          </a>
+          <!-- /wp:html --></section>
+        <!-- /wp:group -->
