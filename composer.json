@@ -16,7 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
-        "drupal/admin_toolbar": "3.5.3",
+        "drupal/admin_toolbar": "^3.6",
         "drupal/bookable_calendar": "2.2.12",
         "drupal/bootstrap5": "^4.0",
         "drupal/calendar_view": "^2.1",
@@ -28,7 +28,7 @@
         "drupal/core-vendor-hardening": "^10.1",
         "drupal/field_group": "^3.6",
         "drupal/gutenberg_starter": "^1.1",
-        "drupal/ixm_blocks": "1.1.0",
+        "drupal/ixm_blocks": "^1.1",
         "drupal/layout_builder_component_attributes": "^2.2",
         "drupal/paragraphs": "1.19",
         "drupal/simple_gmap": "^4.0",
