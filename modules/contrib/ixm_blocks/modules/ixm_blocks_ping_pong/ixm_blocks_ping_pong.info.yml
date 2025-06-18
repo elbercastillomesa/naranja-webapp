@@ -11,7 +11,7 @@ dependencies:
   - drupal:link
   - twig_tweak:twig_tweak
 
-# Information added by Drupal.org packaging script on 2025-02-25
-version: '1.1.0'
+# Information added by Drupal.org packaging script on 2025-05-06
+version: '1.1.1'
 project: 'ixm_blocks'
-datestamp: 1740515410
+datestamp: 1746569838
