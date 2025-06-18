@@ -10,7 +10,7 @@ dependencies:
   - smart_date:smart_date_recur
 configure: bookable_calendar.settings_form
 
-# Information added by Drupal.org packaging script on 2024-08-05
-version: '2.2.12'
+# Information added by Drupal.org packaging script on 2025-05-27
+version: '2.2.13'
 project: 'bookable_calendar'
-datestamp: 1722863833
+datestamp: 1748366861
