@@ -983,7 +983,7 @@ display:
           admin_label: ''
           entity_type: booking_contact
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -1003,13 +1003,14 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
             type: none
-            fail: 'not found'
+            fail: 'access denied'
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         date__end_value:
           id: date__end_value
@@ -2007,7 +2008,7 @@ display:
           admin_label: ''
           entity_type: booking_contact
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -2027,13 +2028,14 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
             type: none
-            fail: 'not found'
+            fail: 'access denied'
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         date__end_value:
           id: date__end_value
