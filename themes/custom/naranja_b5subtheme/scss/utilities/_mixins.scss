@@ -1,0 +1,86 @@
+$breakpoint-small-phone: 375px;
+$breakpoint-phone: 576px;
+$breakpoint-large-phone: 600px;
+$breakpoint-small-tablet: 700px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 992px;
+$breakpoint-small-desktop: 1000px;
+$breakpoint-desktop: 1250px;
+
+@mixin respond-to-min($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media screen and (min-width: $breakpoint-small-phone) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media screen and (min-width: $breakpoint-phone) {
+      @content;
+    }
+  } @else if $breakpoint == phone-lg {
+    @media screen and (min-width: $breakpoint-large-phone) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-sm {
+    @media screen and (min-width: $breakpoint-small-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media screen and (min-width: $breakpoint-laptop) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-sm {
+    @media screen and (min-width: $breakpoint-small-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if $breakpoint == phone-sm {
+    @media screen and (max-width: $breakpoint-small-phone) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media screen and (max-width: $breakpoint-phone) {
+      @content;
+    }
+  } @else if $breakpoint == phone-lg {
+    @media screen and (max-width: $breakpoint-large-phone) {
+      @content;
+    }
+  } @else if $breakpoint == tablet-sm {
+    @media screen and (max-width: $breakpoint-small-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media screen and (max-width: $breakpoint-laptop) {
+      @content;
+    }
+  } @else if $breakpoint == desktop-sm {
+    @media screen and (max-width: $breakpoint-small-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-between($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

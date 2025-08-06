@@ -31,6 +31,11 @@ sites/*/private
 # Ignore OS hidden files
 .DS_Store
 
-# Do not ignore sync configurations folder.
+# Ignore ddev settings file.
+.ddev/
 
+# Ignore node_modules
+modules/**/node_modules/
+
+# Do not ignore sync configurations folder.
 !sites/default/files/sync

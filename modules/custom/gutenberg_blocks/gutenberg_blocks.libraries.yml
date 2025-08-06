@@ -1,0 +1,14 @@
+blocks:
+  js:
+    dist/blocks.js: {}
+    blocks/slider/slider.js: {}
+    blocks/image-carousel/carousel.js: {}
+  css:
+    layout:
+      dist/style-blocks.css: { weight: 100 }
+  dependencies:
+    - gutenberg/react
+    - gutenberg/block-editor
+    - gutenberg/blocks
+    - gutenberg/components
+    - progleasing/base
