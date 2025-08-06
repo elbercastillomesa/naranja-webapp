@@ -6,7 +6,7 @@ core_version_requirement: ^9.3 || ^10 || ^11
 dependencies:
   - drupal:views_bulk_operations
 
-# Information added by Drupal.org packaging script on 2024-08-05
-version: '2.2.12'
+# Information added by Drupal.org packaging script on 2025-05-27
+version: '2.2.13'
 project: 'bookable_calendar'
-datestamp: 1722863833
+datestamp: 1748366861

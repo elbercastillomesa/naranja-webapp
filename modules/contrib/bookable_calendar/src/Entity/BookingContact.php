@@ -2,12 +2,15 @@
 
 namespace Drupal\bookable_calendar\Entity;
 
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Access\AccessResultInterface;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\bookable_calendar\BookingContactInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Url;
 use Drupal\bookable_calendar\DateFormatter;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -411,6 +414,19 @@ class BookingContact extends ContentEntityBase implements BookingContactInterfac
     $reservation_date = \Drupal::service('date.formatter')->format($booking_date, 'long', $timezone);
 
     return $reservation_date;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function access($operation, ?AccountInterface $account = NULL, $return_as_object = FALSE): bool|AccessResultInterface {
+    if ($this->hasField('uid') && !$this->get('uid')->isEmpty() && $this->get('uid')->getString() === (string) $account?->id()) {
+      return parent::access($operation, $account, $return_as_object);
+    }
+    elseif ($account?->hasPermission('access user profiles') === TRUE) {
+      return parent::access($operation, $account, $return_as_object);
+    }
+    return $return_as_object ? AccessResult::forbidden() : FALSE;
   }
 
 }
