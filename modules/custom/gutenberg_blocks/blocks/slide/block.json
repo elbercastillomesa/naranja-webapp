@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gutenberg-blocks/slide",
+  "version": "1.0.0",
+  "title": "Slide",
+  "category": "design",
+  "description": "A single slide with image, text overlay and button.",
+  "icon": "slides",
+  "keywords": ["slide", "carousel", "media"],
+  "textdomain": "default",
+  "parent": [
+    "gutenberg-blocks/carousel"
+  ],
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "src",
+      "selector": "img"
+    },
+    "imageUuid": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "data-entity-uuid",
+      "selector": "img"
+    },
+    "imageAlt": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "alt",
+      "selector": "img"
+    },
+    "title": {
+      "type": "string",
+      "source": "text",
+      "selector": "h1"
+    },
+    "content": {
+      "type": "string",
+      "source": "text",
+      "selector": ".slide-content p"
+    },
+    "buttonText": {
+      "type": "string",
+      "source": "text",
+      "selector": ".slide-button"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "href",
+      "selector": ".slide-button"
+    },
+    "buttonBackgroundColor": {
+      "type": "string",
+      "default": "#006aff"
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "overlayPosition": {
+      "type": "string",
+      "default": "right"
+    },
+    "metadata": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "anchor": true,
+    "html": false
+  }  
+}

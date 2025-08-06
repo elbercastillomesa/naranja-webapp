@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "gutenberg-blocks/image-carousel",
+  "title": "Image Carousel",
+  "description": "A carousel that displays multiple images with customizable settings.",
+  "textdomain": "default",
+  "category": "design",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Our partners"
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#454F5B"
+    },
+    "titleFontSize": {
+      "type": "object",
+      "default": { "value": 36, "unit": "px" }
+    },
+    "titleLevel": {
+      "type": "string",
+      "default": "h1"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#F3F6F6"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": { "value": 20, "unit": "px" },
+        "right": { "value": 20, "unit": "px" },
+        "bottom": { "value": 20, "unit": "px" },
+        "left": { "value": 20, "unit": "px" }
+      }
+    },
+    "margin": {
+      "type": "object",
+      "default": {
+        "top": { "value": 0, "unit": "px" },
+        "right": { "value": 0, "unit": "px" },
+        "bottom": { "value": 0, "unit": "px" },
+        "left": { "value": 0, "unit": "px" }
+      }
+    },
+    "slideDuration": {
+      "type": "number",
+      "default": 3000
+    },
+    "slidesPerView": {
+      "type": "object",
+      "default": {
+        "desktop": 6,
+        "tablet": 3,
+        "mobile": 1
+      }
+    },
+    "images": {
+      "type": "array",
+      "default": []
+    },
+    "imageHeight": {
+      "type": "number",
+      "default": 200
+    },
+    "showArrows": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "anchor": true
+  }
+}
